@@ -6,7 +6,7 @@
 
         <title>Onde estou?</title>
 
-        <!-- <link rel="icon" href="/img/ico.png"> -->
+        <link rel="icon" href="/img/icone.png">
 
         <meta name="theme-color" content="#53b96a">
 
