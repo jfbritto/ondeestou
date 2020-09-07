@@ -18,7 +18,7 @@
         
 
     </head>
-    <body style="background-color:#53b96a !important">
+    <body style="background-color:#f1f1f1 !important">
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="/home"><img id="animate" src="/img/logo.png" alt="" style="width: 120px"></a>
@@ -31,16 +31,10 @@
             
             </ul>
 
-            @if(Session::get('nivel') == 1)
-            <!-- <a class="addBox" href="#"><i class="fas fa-plus-circle" style="color:#f39322"></i></a> -->
-            <!-- <a class="nav-link addBox" href="#" style="color:#f39322">Cadastrar Caixa</a>
-            <a class="nav-link" href="/exp" style="color:#f39322">Exportar Caixas</a> -->
-            @endif
-
-            <a style="color: #53b96a" class="nav-link" href="/home">Home </a>
-            <a style="color: #53b96a" class="nav-link" href="/analytic">Analytics </a>
-            <a style="color: #53b96a" class="nav-link" href="/config">Config </a>
-            <a style="color: #53b96a" class="nav-link" href="#" id="logout">Sair </a>
+            <a style="margin:3px" class="nav-link btn btn-outline-success" href="/home">Home </a>
+            <a style="margin:3px" class="nav-link btn btn-outline-success" href="/analytic">Analytics </a>
+            <a style="margin:3px" class="nav-link btn btn-outline-success" href="/config">Config </a>
+            <a style="margin:3px" class="nav-link btn btn-outline-success" href="#" id="logout">Sair </a>
 
         </div>
         </nav>

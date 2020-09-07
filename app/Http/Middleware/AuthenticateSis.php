@@ -15,7 +15,7 @@ class AuthenticateSis
      */
     public function handle($request, Closure $next)
     {
-        if( session('id') == null ){
+        if( !auth()->user() ){
             return redirect('login');
         }
         

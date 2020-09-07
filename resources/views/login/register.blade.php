@@ -18,22 +18,30 @@
         <div class="container-fluid h-100" style="padding-top: 50px">
             <div class="row h-100 mx-1">
                 <div class="col-12 col-sm-4 offset-sm-4 bg-white my-auto rounded pt-3">
-                    <form id="formAutenticar">
+                    <form id="formAddUser">
                         <div align="center" class="form-group">
                             <!-- <img id="animate" src="img/animation/debut.JPG" alt=""> -->
                             <img width="100%" style="padding: 10px 27px 20px 35px;" src="img/logo.png" alt="">
                         </div>
                         <div class="col-10 offset-1">
                             <div class="form-group">
-                                <label for="">Login</label>
-                                <input required type="text" id="login" class="form-control" maxlength="46">
+                                <label for="">name</label>
+                                <input required type="text" id="name" class="form-control" maxlength="46">
                             </div>
                             <div class="form-group">
-                                <label for="">Senha</label>
-                                <input required type="password" name="" id="senha" class="form-control">
+                                <label for="">url_name</label>
+                                <input required type="text" id="url_name" class="form-control">
                             </div>
                             <div class="form-group">
-                                <button class="btn btn-success btn-lg btn-block">Entrar</button>
+                                <label for="">email</label>
+                                <input required type="text" id="email" class="form-control" maxlength="46">
+                            </div>
+                            <div class="form-group">
+                                <label for="">password</label>
+                                <input required type="text" id="password" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-success btn-lg btn-block">Cadastrar</button>
                             </div>
                         </div>
                     </form>

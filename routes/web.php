@@ -10,15 +10,43 @@ Route::get('/login', 'AuthenticateController@index');
 Route::post('/login', 'AuthenticateController@login');
 Route::post('/logout', 'AuthenticateController@logout');
 
+//REGISTER
+Route::get('/register', 'UserController@register');
+Route::post('/register', 'UserController@addUser');
+
 Route::group(['middleware' => ['authenticate']], function(){
 
     //pagina inicaial
     Route::get('/home', 'HomeController@home');
-    
     //configurações da conta
     Route::get('/config', 'HomeController@config');
-
     //analytics
     Route::get('/analytic', 'HomeController@analytic');
+    
+    //SOCIAL NETWORK
+    Route::get('/search-social-network', 'SocialNetworkController@search');
+    
+    //LINK
+    Route::post('/add-link', 'LinkController@addLink');
+    Route::post('/edit-link', 'LinkController@editLink');
+    Route::get('/search-links', 'LinkController@searchLinksByUser');
+    Route::get('/search-links-by-url', 'LinkController@searchLinksByUrl');
+    Route::get('/search-link-by-id', 'LinkController@searchLinkById');
+    
+    //USER
+    Route::get('/search-user-by-id', 'UserController@searchUserById');
+    Route::post('/edit-user', 'UserController@editUser');
+
+    //CLICK
+    Route::get('/search-views', 'ClickLogController@loadViews');
+    Route::get('/search-clicks', 'ClickLogController@loadClicks');
 
 });
+
+//ROTA PUBLICA DOS CLICK
+Route::post('/add-click', 'ClickLogController@addClick');
+Route::post('/add-view', 'ClickLogController@addView');
+
+//ROTA PUBLICA DOS LINKS
+Route::get('/search-links-by-url', 'LinkController@searchLinksByUrl');
+Route::get('/{link}', 'SiteController@index');
