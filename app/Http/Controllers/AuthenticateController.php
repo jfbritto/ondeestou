@@ -21,17 +21,12 @@ class AuthenticateController extends Controller
 
         if(auth()->attempt($credentials)){
 
+            $msg = "Usuário ".$request->login." acabou de logar!";
+            file_get_contents('https://api.telegram.org/bot1366316005:AAHoexLlhQeRJ5OJEAWPF_dj1dmaSUb1iEc/sendMessage?chat_id=-1001312472436&text='.$msg.'');
+
             return response()->json(['status' => true]);
 
         }
-
-        // if ($request->login == 'login' && $request->senha == 'senha') {
-
-        //     session(['login' => 'usuario']);
-        //     session(['id' => '1']);
-
-        //     return response()->json(['status' => true]);
-        // }
 
         return response()->json(['status' => false, 'mensagem' => 'Usuário ou senha incorretos']);
     }
@@ -41,7 +36,7 @@ class AuthenticateController extends Controller
 
         auth()->logout();
         session()->flush();
-        return redirect('/'); 
+        return true; 
 
     }
 }
