@@ -11,13 +11,14 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/style.css">
 
     </head>
-    <body class="h-100" style="background-color: #53b96a !important;">
+    <body class="h-100" style="background-color: #1abc9c !important;">
 
-        <div class="container-fluid h-100" style="padding-top: 50px">
+        <div class="container-fluid h-100" style="padding-top: 20px">
             <div class="row h-100 mx-1">
-                <div class="col-12 col-sm-4 offset-sm-4 bg-white my-auto rounded pt-3">
+                <div class="col-12 col-sm-4 offset-sm-4 my-auto rounded pt-3" style="background-color: #2c3e50 !important; color: #fff">
                     <form id="formAutenticar">
                         <div align="center" class="form-group">
                             <!-- <img id="animate" src="img/animation/debut.JPG" alt=""> -->
@@ -25,21 +26,33 @@
                         </div>
                         <div class="col-10 offset-1">
                             <div class="form-group">
-                                <label for="">Login</label>
+                                <label for="">Email</label>
                                 <input required type="text" id="login" class="form-control" maxlength="46">
                             </div>
                             <div class="form-group">
                                 <label for="">Senha</label>
                                 <input required type="password" name="" id="senha" class="form-control">
                             </div>
-                            <div class="form-group">
-                                <button class="btn btn-success btn-lg btn-block">Entrar</button>
+                            <div class="form-group text-center">
+                                <button class="btn btn-lg btn-block" style="background-color: #1abc9c !important; color: #fff">Entrar</button>
+                                <br>
+                                Não tem acesso? <a style="color: #1abc9c" href="/register">clique aqui</a>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
+
+        <footer class="bg-black small text-center text-white-50" style="padding: 10px">
+            <div class="container">
+                <div class="social d-flex justify-content-center">
+
+                    <a class="navbar-brand" href="/"><img id="animate" src="/img/logo.png" alt="" style="width: 80px; opacity: 0.5"></a>
+                    
+                </div>
+            </div>
+        </footer>
 
         <script src="/js/jquery-3.5.1.min.js" ></script>
         <script src="/js/bootstrap.min.js" ></script>

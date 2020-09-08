@@ -20,3 +20,7 @@ footer {
 /* .list-group-item{
     color: #fff
 } */
+
+.h-100 {
+    height: 0 !important;
+}
