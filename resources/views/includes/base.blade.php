@@ -52,17 +52,8 @@
             <div class="container">
                 <div class="social d-flex justify-content-center">
 
-                    <a class="navbar-brand" href="/home"><img id="animate" src="/img/logo.png" alt="" style="width: 120px"></a>
+                    <a class="navbar-brand" href="/"><img id="animate" src="/img/logo.png" alt="" style="width: 80px; opacity: 0.5"></a>
                     
-                    <!-- <a target="_blank" href="https://www.instagram.com/bianchijf/" class="mx-2">
-                        <i style="color: #fff; width: 30px" class="fab fa-instagram"></i>
-                    </a>
-                    <a target="_blank" href="https://www.linkedin.com/in/jo%C3%A3o-filipi-britto-a7375a103/" class="mx-2">
-                        <i style="color: #fff; width: 30px" class="fab fa-linkedin"></i>
-                    </a>
-                    <a target="_blank" href="https://github.com/jfbritto" class="mx-2">
-                        <i style="color: #fff; width: 30px" class="fab fa-github"></i>
-                    </a> -->
                 </div>
             </div>
         </footer>
