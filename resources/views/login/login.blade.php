@@ -34,7 +34,7 @@
                                 <input required type="password" name="" id="senha" class="form-control">
                             </div>
                             <div class="form-group text-center">
-                                <button class="btn btn-lg btn-block" style="background-color: #1abc9c !important; color: #fff">Entrar</button>
+                                <button class="btn btn-lg btn-block" style="background-color: #1abc9c !important; color: #fff; margin-top: 40px;">Entrar</button>
                                 <br>
                                 Não tem acesso? <a style="color: #1abc9c" href="/register">clique aqui</a>
                             </div>
@@ -57,7 +57,7 @@
         <script src="/js/jquery-3.5.1.min.js" ></script>
         <script src="/js/bootstrap.min.js" ></script>
         <script src="/js/sweetalert.js"></script>
-        <script src="/js/app.js"></script>
+        <!-- <script src="/js/app.js"></script> -->
         <script src="/js/login.js"></script>
     </body>
 

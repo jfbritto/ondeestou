@@ -42,7 +42,9 @@
                                 <input required type="text" id="password" class="form-control">
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-lg btn-block" style="background-color: #1abc9c !important; color: #fff">Cadastrar</button>
+                                <button type="submit" class="btn btn-lg btn-block" style="background-color: #1abc9c !important; color: #fff; margin-top: 40px;">Cadastrar</button>
+                                <br>
+                                Já tem acesso? <a style="color: #1abc9c" href="/login">clique aqui</a>
                             </div>
                         </div>
                     </form>
@@ -63,7 +65,7 @@
         <script src="/js/jquery-3.5.1.min.js" ></script>
         <script src="/js/bootstrap.min.js" ></script>
         <script src="/js/sweetalert.js"></script>
-        <script src="/js/app.js"></script>
+        <!-- <script src="/js/app.js"></script> -->
         <script src="/js/login.js"></script>
     </body>
 
