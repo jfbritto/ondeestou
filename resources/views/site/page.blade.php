@@ -37,12 +37,12 @@
     </head>
     <body style="background-color:#f1f1f1 !important">
 
-        <div class="container mt-5" style="padding: 0px 30px 0px 30px;">
+        <div class="container mt-3" style="padding: 0px 30px 0px 30px;">
 
             
             <div class="row">
                 <div class="col-sm-5 col-md-4 mb-3 text-center">
-                    <img src="/img/user.png" style="margin-bottom: 10px; max-width: 200px" class="img img-fluid rounded-circle img-thumbnail rounded " alt="User"> 
+                    <img src="/img/user.png" style="margin-bottom: 10px; max-width: 150px" class="img img-fluid rounded-circle img-thumbnail rounded " alt="User"> 
                 </div>
                 <div class="col-sm-7 col-md-8 mb-3">
 
