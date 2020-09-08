@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Mail;
 
 class AuthenticateController extends Controller
 {
@@ -10,6 +11,7 @@ class AuthenticateController extends Controller
     function index()
     {
         // dd(auth()->user());
+        // Mail::raw();
         return view('login.login');
     }
 
