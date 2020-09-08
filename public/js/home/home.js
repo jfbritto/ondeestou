@@ -8,6 +8,16 @@ $(document).ready(function () {
     });
 
     $("#lista-links").on("click", ".editLink", function () {
+
+        Swal.queue([{title: "Carregando...",
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                onOpen: () => {
+                    Swal.showLoading();
+                },
+            },
+        ]);
+
         let id = $(this).data("id");
         loadEditModal(id);
     });
@@ -180,6 +190,7 @@ $(document).ready(function () {
                             `);
                             }
 
+                            Swal.close();
                             $("#editLinkModal").modal("show");
                         }
                     })
