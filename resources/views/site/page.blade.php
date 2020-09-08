@@ -41,10 +41,10 @@
 
             
             <div class="row">
-                <div class="col-sm-5 col-md-4 mb-3 text-center">
+                <div class="col-sm-5 col-md-4 text-center">
                     <img src="/img/user.png" style="margin-bottom: 10px; max-width: 150px" class="img img-fluid rounded-circle img-thumbnail rounded " alt="User"> 
                 </div>
-                <div class="col-sm-7 col-md-8 mb-3">
+                <div class="col-sm-7 col-md-8">
 
                     <h3 class="h3 text-center">{{$user->name}}</h3>
                     <p class="text-center"> <span class="badge badge-secondary"> <i class="fas fa-map-marker-alt"></i> {{$user->city}} </span></p>
