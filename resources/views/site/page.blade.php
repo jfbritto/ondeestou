@@ -46,8 +46,8 @@
                 </div>
                 <div class="col-sm-7 col-md-8 mb-3">
 
-                    <h3 class="h3 text-left">{{$user->name}}</h3>
-                    <p class="text-left">{{$user->city}}</p>
+                    <h3 class="h3 text-center">{{$user->name}}</h3>
+                    <p class="text-center"> <span class="badge badge-secondary"> <i class="fas fa-map-marker-alt"></i> {{$user->city}} </span></p>
                     <p class="text-justify">{{$user->bio}}</p>
 
                 </div>
