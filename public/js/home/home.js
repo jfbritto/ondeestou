@@ -64,8 +64,10 @@ $(document).ready(function () {
                                 <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" style="background-color: ${data.data[i].color}; color: #fff">
                                     ${data.data[i].icon}
                                     <span>${data.data[i].name}</span>
-                                    <i class="fas fa-link openLink" data-link="${data.data[i].link}"></i>
-                                    <i class="fas fa-ellipsis-v editLink" data-id="${data.data[i].id}"></i>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light openLink" data-link="${data.data[i].link}"><i class="fas fa-link"></i></button>
+                                        <button type="button" class="btn btn-light editLink" data-id="${data.data[i].id}"><i class="fas fa-pen"></i></button>
+                                    </div>
                                 </a>
                             </div>
 

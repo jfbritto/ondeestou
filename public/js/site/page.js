@@ -23,7 +23,7 @@ $(document).ready(function(){
 
                         $("#lista-links").append(`
                         <div class="list-group" style="margin-bottom: 10px;" data-id_link="${data.data[i].id}">
-                            <a target="_blank" href="${data.data[i].link}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" style="background-color: ${data.data[i].color}; color: #fff">
+                            <a target="_blank" rel=”noopener noreferrer” href="${data.data[i].link}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" style="background-color: ${data.data[i].color}; color: #fff">
                                 ${data.data[i].icon}
                                 <span>${data.data[i].name}</span>
                                 <i class="fas fa-arrow-right"></i>
