@@ -21,9 +21,6 @@ class AuthenticateController extends Controller
 
         if(auth()->attempt($credentials)){
 
-            $msg = "Usuário ".$request->login." acabou de logar!";
-            file_get_contents('https://api.telegram.org/bot1366316005:AAHoexLlhQeRJ5OJEAWPF_dj1dmaSUb1iEc/sendMessage?chat_id=-1001312472436&text='.$msg.'');
-
             return response()->json(['status' => true]);
 
         }

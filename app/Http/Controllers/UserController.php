@@ -71,6 +71,9 @@ class UserController extends Controller
 
         $response = $this->userService->addUser($data);
 
+        $msg = $request->name." acabou de se cadastrar!";
+        file_get_contents('https://api.telegram.org/bot1366316005:AAHoexLlhQeRJ5OJEAWPF_dj1dmaSUb1iEc/sendMessage?chat_id=-1001312472436&text='.$msg.'');
+
         if($response['status'] == 'success')
             return response()->json(['status'=>'success'], 201);
 
