@@ -68,7 +68,7 @@
             <div class="container">
                 <div class="social d-flex justify-content-center">
 
-                    <a class="navbar-brand" href="/"><img id="animate" src="/img/logo.png" alt="" style="width: 120px"></a>
+                    <a class="navbar-brand" href="/"><img id="animate" src="/img/logo.png" alt="" style="width: 80px"></a>
                     
                 </div>
             </div>
