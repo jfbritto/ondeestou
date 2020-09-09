@@ -9,13 +9,14 @@ use App\Mail\RecoverPasswordMail;
 class AuthenticateController extends Controller
 {
 
-    function index()
+    public function index()
     {
-
+        // Mail::send(new RecoverPasswordMail());
+        
         return view('login.login');
     }
 
-    function login(Request $request)
+    public function login(Request $request)
     {
 
 
@@ -23,8 +24,6 @@ class AuthenticateController extends Controller
 
         if(auth()->attempt($credentials)){
 
-            Mail::to('jf.britto@hotmail.com')->send(new RecoverPasswordMail());
-            
             return response()->json(['status' => true]);
 
         }
@@ -32,7 +31,7 @@ class AuthenticateController extends Controller
         return response()->json(['status' => false, 'mensagem' => 'Usuário ou senha incorretos']);
     }
 
-    function logout()
+    public function logout()
     {
 
         auth()->logout();

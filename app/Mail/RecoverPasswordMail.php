@@ -27,7 +27,12 @@ class RecoverPasswordMail extends Mailable
      * @return $this
      */
     public function build()
-    {
-        return $this->view('mail.mail');
+    {   
+        $this->to('jf.britto@hotmail.com');
+        // return $this->view('mail.mail');
+
+        return $this->from('team-atitude@tatameonline.com')
+                            ->subject("Bem-vindo!")
+                            ->view('mail.mail');
     }
 }
