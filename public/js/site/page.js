@@ -3,6 +3,10 @@ $(document).ready(function(){
     loadLinks();
     addView();
 
+    setInterval(() => {
+        loadLinks();
+    }, 10000);
+
     $("#lista-links").on("click", ".list-group", function(){
         let id_link = $(this).data("id_link");
         addClick(id_link);

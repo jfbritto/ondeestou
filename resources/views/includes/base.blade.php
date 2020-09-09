@@ -15,6 +15,18 @@
         <link rel="stylesheet" href="/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/all.min.css">
         <link rel="stylesheet" href="/css/style.css">
+        <link href="/template/css/styles.css" rel="stylesheet" />
+
+        <style>
+            #mainNav {
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+            }
+
+            .modal-body {
+                 padding: 1rem 1rem;
+            }
+        </style>
         
 
     </head>
@@ -37,6 +49,25 @@
             <a style="margin:3px" class="nav-link btn btn-outline-success" href="#" id="logout">Sair </a>
 
         </div>
+        </nav>
+
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="/img/logo.png" alt="" width="150"> </a>
+                <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/home">Home </a>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/analytic">Analytics </a>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/config">Config </a>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#" id="logout">Sair </a>
+                    </ul>
+                </div>
+            </div>
         </nav>
 
 

@@ -32,23 +32,90 @@
         <link rel="stylesheet" href="/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/all.min.css">
         <link rel="stylesheet" href="/css/style.css">
+        <link href="/template/css/styles.css" rel="stylesheet" />
+
+        <style>
+            .bio {
+                margin: 10px 0;
+                white-space: pre-wrap;
+            }
+            .profile-info {
+                align-items: center;
+                box-sizing: border-box;
+                display: flex;
+                margin-top: 1.25rem;
+                flex-direction: column;
+                flex-grow: 1;
+                flex-basis: 1%;
+                width: 100%;
+            }
+            .display-name {
+                justify-content: center;
+                text-align: center;
+                width: 100%;
+                font-size: 2rem;
+                word-break: break-word;
+            }
+            .location {
+                align-items: center;
+                border: 1px solid #34312f;
+                border-radius: 1.5625rem;
+                color: #34312f;
+                display: flex;
+                font-size: .7rem;
+                margin: .3125rem 0;
+                margin-top: .8rem 0;
+                padding: .5rem .9375rem .5rem .625rem;
+                width: -webkit-max-content;
+                width: -moz-max-content;
+                width: max-content;
+            }
+
+            .icon-style {
+                font-size: 35px;
+            }
+
+            /* If the screen size is 600px or less, set the font-size of <div> to 30px */
+            @media only screen and (min-width: 575px) {
+                .base-cima{
+                    margin-bottom: 15px;
+                }
+                .profile-info{
+                    align-items:flex-start !important;
+                }
+                .display-name{
+                    text-align: left !important;
+                }
+                .location{
+                    align-items: center;
+                }
+            }
+
+        </style>
         
 
     </head>
-    <body style="background-color:#f1f1f1 !important">
+    <body style="background-color:#f1f1f1 !important; font-family: Raleway,sans-serif;">
 
-        <div class="container mt-3" style="padding: 0px 30px 0px 30px;">
+        <div class="container mt-3" style="padding: 0px 25px 0px 25px; max-width: 600px">
 
             
-            <div class="row">
+            <div class="row base-cima">
                 <div class="col-sm-5 col-md-4 text-center">
-                    <img src="/img/user.png" style="margin-bottom: 20px; margin-top:10px; max-width: 150px" class="img img-fluid rounded-circle img-thumbnail rounded " alt="User"> 
+                    <img src="/img/user.png" style="max-width: 150px" class="img img-fluid rounded-circle img-thumbnail rounded " alt="User"> 
                 </div>
                 <div class="col-sm-7 col-md-8">
 
-                    <h3 class="h3 text-center">{{$user->name}}</h3>
-                    <p class="text-center"> <span class="badge badge-secondary"> <i class="fas fa-map-marker-alt"></i> {{$user->city}} </span></p>
-                    <p class="text-justify">{{$user->bio}}</p>
+                    <div class="profile-info">
+                        <div class="display-name">
+                            <span>{{$user->name}}&nbsp;</span>
+                        </div>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i> &nbsp;&nbsp;{{$user->city}}
+                        </div>
+                        <p class="bio">{{$user->bio}}</p>
+                    </div>
+
 
                 </div>
             </div>

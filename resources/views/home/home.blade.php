@@ -4,7 +4,7 @@
 
 <div class="card mb-3">
     <div class="card-header">
-        Compartilhe!
+        Compartilhe esse link!
     </div>
     <div class="card-body">
 

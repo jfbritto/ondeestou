@@ -75,7 +75,6 @@ $(document).ready(function () {
                                     ${data.data[i].icon}
                                     <span>${data.data[i].name}</span>
                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn btn-light openLink" data-link="${data.data[i].link}"><i class="fas fa-link"></i></button>
                                         <button type="button" class="btn btn-light editLink" data-id="${data.data[i].id}"><i class="fas fa-pen"></i></button>
                                     </div>
                                 </a>
@@ -87,6 +86,8 @@ $(document).ready(function () {
                 }
             })
             .catch();
+
+            // <button type="button" class="btn btn-light openLink" data-link="${data.data[i].link}"><i class="fas fa-link"></i></button>
     }
 
     //carregar informações do usuário logado
