@@ -20,7 +20,13 @@ class SiteController extends Controller
             
             if($user){
 
-                return view('site.page', ['user'=>$user[0]]);
+                if(($user[0]->latitude == null || $user[0]->latitude == "") && ($user[0]->longitude == null || $user[0]->longitude == "")){
+                    $link = "#";
+                }else{
+                    $link = "https://www.google.com/maps/search/?api=1&query=".$user[0]->latitude.",".$user[0]->longitude;
+                }
+
+                return view('site.page', ['user'=>$user[0], 'link'=>$link]);
 
             }else{
 

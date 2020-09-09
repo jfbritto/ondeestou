@@ -38,6 +38,10 @@ $(document).ready(function(){
 
                     }
 
+                }else{
+                    $("#lista-links").append(`
+                        Nenhuma rede social cadastrada
+                    `);
                 }
 
             } 

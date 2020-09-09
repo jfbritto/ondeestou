@@ -69,6 +69,7 @@
                 width: -webkit-max-content;
                 width: -moz-max-content;
                 width: max-content;
+                cursor: pointer;
             }
 
             .icon-style {
@@ -110,9 +111,13 @@
                         <div class="display-name">
                             <span>{{$user->name}}&nbsp;</span>
                         </div>
-                        <div class="location">
-                            <i class="fas fa-map-marker-alt"></i> &nbsp;&nbsp;{{$user->city}}
-                        </div>
+                        @if($user->city != "")
+                            <a @if($link != "#")target="_blank"@endif href="{{$link}}" style="text-decoration: none;">
+                                <div class="location">
+                                    <i class="fas fa-map-marker-alt"></i> &nbsp;&nbsp;{{$user->city}} @if($user->state != ""), {{$user->state}} @endif
+                                </div>
+                            </a>
+                        @endif
                         <p class="bio">{{$user->bio}}</p>
                     </div>
 

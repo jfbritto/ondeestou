@@ -30,10 +30,6 @@
                                 <input required type="text" id="name" class="form-control" maxlength="46">
                             </div>
                             <div class="form-group">
-                                <label for="">URL</label>
-                                <input required type="text" id="url_name" class="form-control" placeholder="Ex: nomesobrenome">
-                            </div>
-                            <div class="form-group">
                                 <label for="">Email</label>
                                 <input required type="text" id="email" class="form-control" maxlength="46">
                             </div>

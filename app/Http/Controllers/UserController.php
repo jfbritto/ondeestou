@@ -37,7 +37,7 @@ class UserController extends Controller
     {
         $url = Str::kebab(trim($request->url_name));
 
-        $user = DB::select( DB::raw("select * from users where url_name = '".$url."' "));
+        $user = DB::select( DB::raw("select * from users where url_name = '".$url."' and id != ".$request->id.""));
 
         if(count($user) > 0)
             return response()->json(['status'=>'error', 'message'=>'A URL "'.$url.'" já pertence à outro usuário!'], 201);
@@ -82,9 +82,11 @@ class UserController extends Controller
     public function addUser(Request $request)
     {
 
+        $url = Str::kebab(trim($request->name));
+
         $data = [
             'name' => trim($request->name),
-            'url_name' => trim($request->url_name),
+            'url_name' => $url,
             'email' => trim($request->email) ,
             'password' => bcrypt(trim($request->password)),
             'avatar' => null,

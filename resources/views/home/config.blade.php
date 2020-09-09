@@ -49,7 +49,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text"><i class="fas fa-map-marker-alt"></i></div>
                         </div>
-                        <input type="text" class="form-control" id="city" placeholder="Latitude">
+                        <input type="text" class="form-control" id="latitude" placeholder="Latitude">
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -57,7 +57,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text"><i class="fas fa-map-marker-alt"></i></div>
                         </div>
-                        <input type="text" class="form-control" id="city" placeholder="Longitude">
+                        <input type="text" class="form-control" id="longitude" placeholder="Longitude">
                     </div>                    
                 </div>
                 <div class="col-md-12">

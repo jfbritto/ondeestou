@@ -50,7 +50,6 @@ $(document).ready(function(){
                 Swal.showLoading();
                 $.post("/register", {
                     name:$("#name").val(), 
-                    url_name:$("#url_name").val(), 
                     email:$("#email").val(), 
                     password:$("#password").val(),
                 }, function(data) {
