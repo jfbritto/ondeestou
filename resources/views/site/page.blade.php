@@ -76,6 +76,12 @@
                 font-size: 35px;
             }
 
+      /* Set the size of the div element that contains the map */
+            #map {
+                height: 400px;  /* The height is 400 pixels */
+                width: 100%;  /* The width is the width of the web page */
+            }
+
             /* If the screen size is 600px or less, set the font-size of <div> to 30px */
             @media only screen and (min-width: 575px) {
                 .base-cima{
@@ -136,6 +142,8 @@
                     
         </div>   
 
+        <!-- <div id="map"></div> -->
+
         <footer class="bg-black small text-center text-white-50" style="padding: 10px">
             <div class="container">
                 <div class="social d-flex justify-content-center">
@@ -152,6 +160,24 @@
         <script src="/js/includes.js"></script>
         <script src="/js/site/page.js" ></script>
         @yield('js')
+
+        <!-- <script>
+            // Initialize and add the map
+            function initMap() {
+                // The location of Uluru
+                var uluru = {lat: -20.237536, lng: -41.509946};
+                // The map, centered at Uluru
+                var map = new google.maps.Map(
+                    document.getElementById('map'), {zoom: 4, center: uluru});
+                // The marker, positioned at Uluru
+                var marker = new google.maps.Marker({position: uluru, map: map});
+            }
+        </script> -->
+
+        <!-- <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp28jkbFRMlEdBXOzpGINUbZ27s7JjnH4&callback=initMap"></script> -->
+
     </body>
 
 </html>
+
+
