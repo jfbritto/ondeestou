@@ -92,7 +92,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text"><i class="fas fa-lock"></i></div>
                         </div>
-                        <input type="password" class="form-control" id="password" placeholder="Informe a nova senha">
+                        <input required minlength="6" type="password" class="form-control" id="password" placeholder="Informe a nova senha">
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -100,7 +100,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text"><i class="fas fa-lock"></i></div>
                         </div>
-                        <input type="password" class="form-control" id="password2" placeholder="Repita a nova senha">
+                        <input required minlength="6" type="password" class="form-control" id="password2" placeholder="Repita a nova senha">
                     </div>
                 </div>
             </div>
