@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Services\UserService;
 use Str;
+use DB;
 
 class UserController extends Controller
 {
@@ -34,11 +35,17 @@ class UserController extends Controller
     //editar user
     public function editUser(Request $request)
     {
+        $url = Str::kebab(trim($request->url_name));
+
+        $user = DB::select( DB::raw("select * from users where url_name = '".$url."' "));
+
+        if(count($user) > 0)
+            return response()->json(['status'=>'error', 'message'=>'A URL "'.$url.'" já pertence à outro usuário!'], 201);
 
         $data = [
             'id' => $request->id,
             'name' => trim($request->name) ,
-            'url_name' => Str::kebab(trim($request->url_name)) ,
+            'url_name' => $url ,
             'city' => trim($request->city),
             'state' => trim($request->state),
             'latitude' => trim($request->latitude),

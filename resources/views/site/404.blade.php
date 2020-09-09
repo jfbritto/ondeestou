@@ -1,44 +1,30 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Onde estou?</title>
+@extends('includes.base_site')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <link rel="stylesheet" href="/css/bootstrap.min.css">
+@section('body')
 
-    </head>
-    <body>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <!-- <a class="navbar-brand" href="/home"><img id="animate" src="/img/logo.png" alt="" style="width: 120px"></a> -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                
-                </ul>
-
-                <a class="nav-link" href="/login">Login</a>
-
-            </div>
-        </nav>
-
-        <div class="container text-center">
-
-            <h1>404 error</h1>
-            
-
+<!-- Masthead-->
+<header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+        <!-- Masthead Avatar Image-->
+        <img class="masthead-avatar mb-5" src="/template/assets/img/404.png" alt="" />
+        <!-- Masthead Heading-->
+        <h1 class="masthead-heading text-uppercase mb-0">Eita!</h1>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-warning"></i></div>
+            <div class="divider-custom-line"></div>
         </div>
+        <!-- Masthead Subheading-->
+        <p class="masthead-subheading font-weight-light mb-0">Não encontramos essa rota!</p>
+        <p class="masthead-subheading font-weight-light mb-0">Tenta outra aí!</p>
+    </div>
+</header>
 
+@stop
 
-        <script src="/js/jquery-3.5.1.min.js" ></script>
-        <script src="/js/bootstrap.min.js" ></script>
-    </body>
+@section('js')
 
-</html>
+@stop

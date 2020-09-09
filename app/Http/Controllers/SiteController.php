@@ -12,7 +12,7 @@ class SiteController extends Controller
 
         if($url == ""){
             
-            return view('site.home');
+            return view('site.home', ['error' => false]);
 
         }else{
 
@@ -24,7 +24,7 @@ class SiteController extends Controller
 
             }else{
 
-                return view('site.404');
+                return view('site.404', ['error' => true]);
 
             }
             
