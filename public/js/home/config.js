@@ -10,6 +10,7 @@ $(document).ready(function () {
                         $("#id").val(data.data[0].id);
                         $("#name").val(data.data[0].name);
                         $("#city").val(data.data[0].city);
+                        $("#state").val(data.data[0].state);
                         $("#bio").val(data.data[0].bio);
                         $("#url_name").val(data.data[0].url_name);
                     }
