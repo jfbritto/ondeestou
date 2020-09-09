@@ -26,7 +26,7 @@
         <a href="#" class="btn btn-outline-success" id="newLinkBtn">Novo Link</a>
     </div>
     <div class="card-body" id="lista-links">
-
+        
     </div>
 </div>
 

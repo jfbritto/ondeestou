@@ -1,7 +1,7 @@
 $(document).ready(function(){
-
-    $("#logout").on("click", function(){
-
+    
+    $(".logout").on("click", function(){
+        
         Swal.queue([{
             title: 'Desconectando...',
             allowOutsideClick: false,

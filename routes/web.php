@@ -36,6 +36,7 @@ Route::group(['middleware' => ['authenticate']], function(){
     //USER
     Route::get('/search-user-by-id', 'UserController@searchUserById');
     Route::post('/edit-user', 'UserController@editUser');
+    Route::post('/edit-pass', 'UserController@editPass');
 
     //CLICK
     Route::get('/search-views', 'ClickLogController@loadViews');

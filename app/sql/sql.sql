@@ -7,7 +7,10 @@ CREATE TABLE users (
     avatar VARCHAR(100),
     bio text,
     city VARCHAR(100),
+    state VARCHAR(100),
     phone VARCHAR(100),
+    latitude VARCHAR(100),
+    longitude VARCHAR(100),
     id_theme INT(1),
     is_root TINYINT(1),
     is_admin TINYINT(100),
@@ -21,6 +24,8 @@ CREATE TABLE links (
     id_user INT(1),
     id_social_network INT(1),
     link VARCHAR(100),
+    phone VARCHAR(100),
+    msg VARCHAR(100),
     status CHAR(1),
     created_at DATETIME,
     updated_at DATETIME,
@@ -74,3 +79,11 @@ insert into social_networks (name, icon, color) values("Telegram", "<i class='fa
 insert into social_networks (name, icon, color) values("Tumblr", "<i class='fab fa-tumblr icon-style'></i>", "#001935");    
 insert into social_networks (name, icon, color) values("Twitter", "<i class='fab fa-twitter icon-style'></i>", "#1da1f2");    
 insert into social_networks (name, icon, color) values("Vimeo", "<i class='fab fa-vimeo icon-style'></i>", "#3d95ce");
+
+
+alter table users add column state VARCHAR(100) after city;
+alter table users add column longitude VARCHAR(100) after phone;
+alter table users add column latitude VARCHAR(100) after phone;
+
+alter table links add column phone VARCHAR(100) after link;
+alter table links add column msg VARCHAR(100) after link;

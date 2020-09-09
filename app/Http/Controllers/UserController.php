@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Services\UserService;
-use Session;
+use Str;
 
 class UserController extends Controller
 {
@@ -38,11 +38,32 @@ class UserController extends Controller
         $data = [
             'id' => $request->id,
             'name' => trim($request->name) ,
+            'url_name' => Str::kebab(trim($request->url_name)) ,
             'city' => trim($request->city),
+            'state' => trim($request->state),
+            'latitude' => trim($request->latitude),
+            'longitude' => trim($request->longitude),
             'bio' => trim($request->bio),
         ];
 
         $response = $this->userService->editUser($data);
+
+        if($response['status'] == 'success')
+            return response()->json(['status'=>'success'], 201);
+
+        return response()->json(['status'=>'error', 'message'=>$response['data']], 201);
+    }
+
+    //editar user
+    public function editPass(Request $request)
+    {
+
+        $data = [
+            'id' => $request->id,
+            'password' => bcrypt(trim($request->password)),
+        ];
+
+        $response = $this->userService->editPass($data);
 
         if($response['status'] == 'success')
             return response()->json(['status'=>'success'], 201);

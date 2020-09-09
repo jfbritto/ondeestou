@@ -10,6 +10,8 @@ class Link extends Model
         'id_user',
         'id_social_network',
         'link',
+        'phone',
+        'msg',
         'status',
         'created_at',
         'updated_at',
