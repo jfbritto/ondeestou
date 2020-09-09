@@ -37,7 +37,7 @@
                                 <label for="">Senha</label>
                                 <input required type="text" id="password" class="form-control">
                             </div>
-                            <div class="form-group">
+                            <div class="form-group text-center">
                                 <button type="submit" class="btn btn-lg btn-block" style="background-color: #1abc9c !important; color: #fff; margin-top: 40px;">Cadastrar</button>
                                 <br>
                                 Já tem acesso? <a style="color: #1abc9c" href="/login">clique aqui</a>
@@ -48,12 +48,15 @@
             </div>
         </div>
 
-        <footer class="bg-black small text-center text-white-50" style="padding: 10px">
+        <!-- Footer-->
+        <footer class="footer text-center">
             <div class="container">
-                <div class="social d-flex justify-content-center">
-
-                    <a class="navbar-brand" href="/"><img id="animate" src="/img/logo.png" alt="" style="width: 80px; opacity: 0.5"></a>
+                <div class="row">
                     
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-12">
+                        <a class="navbar-brand" href="/"><img id="animate" src="/img/logo.png" alt="" style="width: 100px; opacity: 0.5"></a>
+                    </div>
                 </div>
             </div>
         </footer>

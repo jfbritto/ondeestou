@@ -7,7 +7,10 @@
 </head>
 <body>
     
-    TESTE DE EMAIL
+    RECUPERAÇÃO DE SENHA
+    <br>
+    <br>
+    <a href="https://ondeestou.app/">CLIQUE AQUI</a>
 
 </body>
 </html>

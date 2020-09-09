@@ -31,8 +31,8 @@ class RecoverPasswordMail extends Mailable
         $this->to('jf.britto@hotmail.com');
         // return $this->view('mail.mail');
 
-        return $this->from('team-atitude@tatameonline.com')
-                            ->subject("Bem-vindo!")
+        return $this->from('naoresponda@ondeestou.com')
+                            ->subject("Recuperação de senha!")
                             ->view('mail.mail');
     }
 }

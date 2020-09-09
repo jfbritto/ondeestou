@@ -44,12 +44,15 @@
             </div>
         </div>
 
-        <footer class="bg-black small text-center text-white-50" style="padding: 10px">
+        <!-- Footer-->
+        <footer class="footer text-center">
             <div class="container">
-                <div class="social d-flex justify-content-center">
-
-                    <a class="navbar-brand" href="/"><img id="animate" src="/img/logo.png" alt="" style="width: 80px; opacity: 0.5"></a>
+                <div class="row">
                     
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-12">
+                        <a class="navbar-brand" href="/"><img id="animate" src="/img/logo.png" alt="" style="width: 100px; opacity: 0.5"></a>
+                    </div>
                 </div>
             </div>
         </footer>
