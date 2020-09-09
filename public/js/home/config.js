@@ -11,6 +11,8 @@ $(document).ready(function () {
                         $("#name").val(data.data[0].name);
                         $("#city").val(data.data[0].city);
                         $("#state").val(data.data[0].state);
+                        $("#latitude").val(data.data[0].latitude);
+                        $("#longitude").val(data.data[0].longitude);
                         $("#bio").val(data.data[0].bio);
                         $("#url_name").val(data.data[0].url_name);
                     }
