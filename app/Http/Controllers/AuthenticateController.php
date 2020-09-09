@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Mail;
+use App\Mail\RecoverPasswordMail;
 
 class AuthenticateController extends Controller
 {
 
     function index()
     {
-        // dd(auth()->user());
-        // Mail::raw();
+
         return view('login.login');
     }
 
@@ -23,6 +23,8 @@ class AuthenticateController extends Controller
 
         if(auth()->attempt($credentials)){
 
+            Mail::to('jf.britto@hotmail.com')->send(new RecoverPasswordMail());
+            
             return response()->json(['status' => true]);
 
         }
