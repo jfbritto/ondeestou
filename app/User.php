@@ -25,6 +25,8 @@ class User extends Authenticatable
         'id_theme',
         'is_root',
         'is_admin',
+        'time_token',
+        'token_email',
         'id_admin',
         'created_at',
         'updated_at',

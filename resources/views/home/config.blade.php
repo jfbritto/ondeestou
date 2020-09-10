@@ -4,6 +4,33 @@
 
 <div class="card mb-3">
     <div class="card-header">
+        Editar URL personalizada
+    </div>
+    <div class="card-body">
+
+        <form action="POST" id="formEditURL">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">ondeestou.app/</div>
+                        </div>
+                        <input required type="text" class="form-control" id="url_name" placeholder="Informe a URL">
+                    </div>
+                </div>
+            </div>
+
+            <input type="hidden" class="form-control" id="id">
+        </form>
+    </div>
+    <div class="card-footer text-right">
+        <button form="formEditURL" type="submit" class="btn btn-outline-success">Salvar</button>
+    </div>
+</div>
+
+<div class="card mb-3">
+    <div class="card-header">
         Informações do perfil
     </div>
     <div class="card-body">
@@ -11,20 +38,12 @@
         <form action="POST" id="formEditUser">
 
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="input-group mb-2">
                         <div class="input-group-prepend">
                             <div class="input-group-text"><i class="fas fa-user"></i></div>
                         </div>
                         <input type="text" class="form-control" id="name" placeholder="Nome">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="input-group mb-2">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text"><i class="fas fa-link"></i></div>
-                        </div>
-                        <input type="text" class="form-control" id="url_name" placeholder="Informe a URL">
                     </div>
                 </div>
                 <div class="col-md-6">

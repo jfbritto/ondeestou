@@ -35,7 +35,6 @@ $(document).ready(function () {
                     $.post(window.location.origin + "/edit-user", {
                         id: $("#id").val(),
                         name: $("#name").val(),
-                        url_name: $("#url_name").val(),
                         city: $("#city").val(),
                         state: $("#state").val(),
                         latitude: $("#latitude").val(),
@@ -54,6 +53,56 @@ $(document).ready(function () {
                                 Swal.fire({
                                     icon: "success",
                                     text: "Perfil editado com sucesso!",
+                                    showConfirmButton: false,
+                                    showCancelButton: true,
+                                    cancelButtonText: "OK",
+                                    onClose: () => {},
+                                });
+                            } else if (data.status == "error") {
+                                // showError(data.message);
+                                Swal.fire({
+                                    icon: "error",
+                                    text: data.message,
+                                    showConfirmButton: false,
+                                    showCancelButton: true,
+                                    cancelButtonText: "OK",
+                                    onClose: () => {},
+                                });
+                            }
+                        })
+                        .catch();
+                },
+            },
+        ]);
+    });
+
+    // editar user
+    $("#formEditURL").submit(function (e) {
+        e.preventDefault();
+
+        Swal.queue([
+            {
+                title: "Carregando...",
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                onOpen: () => {
+                    Swal.showLoading();
+                    $.post(window.location.origin + "/edit-url", {
+                        id: $("#id").val(),
+                        url_name: $("#url_name").val(),
+                    })
+                        .then(function (data) {
+                            if (data.status == "success") {
+
+                                loadUser();
+
+                                $("#formAddLink").each(function () {
+                                    this.reset();
+                                });
+
+                                Swal.fire({
+                                    icon: "success",
+                                    text: "URL editada com sucesso!",
                                     showConfirmButton: false,
                                     showCancelButton: true,
                                     cancelButtonText: "OK",

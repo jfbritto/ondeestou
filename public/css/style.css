@@ -24,3 +24,24 @@ footer {
 .h-100 {
     height: 0 !important;
 }
+
+.btn-outline-success{
+    color: #1abc9c !important;
+    border-color: #1abc9c !important;
+}
+
+.btn-outline-success:focus, .btn-outline-success.focus {
+    box-shadow: 0 0 0 0.2rem #1abc9c !important;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #1abc9c !important;
+    border-color: #1abc9c !important;
+}
+
+.btn-success:hover {
+    color: #fff;
+    background-color: #1abc9c !important;
+    border-color: #1abc9c !important;
+}

@@ -8,13 +8,21 @@ Route::get('/', 'SiteController@index');
 //LOGIN
 Route::get('/login', 'AuthenticateController@index');
 Route::post('/login', 'AuthenticateController@login');
-Route::post('/logout', 'AuthenticateController@logout');
+
+Route::get('/forgot-pass', 'AuthenticateController@forgotPassTela');
+Route::post('/forgot-pass', 'AuthenticateController@forgotPass');
+
+Route::get('/change-pass', 'AuthenticateController@changePassTela');
+Route::post('/change-pass', 'AuthenticateController@changePass');
 
 //REGISTER
 Route::get('/register', 'UserController@register');
 Route::post('/register', 'UserController@addUser');
 
 Route::group(['middleware' => ['authenticate']], function(){
+
+    //logout
+    Route::post('/logout', 'AuthenticateController@logout');
 
     //pagina inicaial
     Route::get('/home', 'HomeController@home');
@@ -37,6 +45,7 @@ Route::group(['middleware' => ['authenticate']], function(){
     Route::get('/search-user-by-id', 'UserController@searchUserById');
     Route::post('/edit-user', 'UserController@editUser');
     Route::post('/edit-pass', 'UserController@editPass');
+    Route::post('/edit-url', 'UserController@editUrl');
 
     //CLICK
     Route::get('/search-views', 'ClickLogController@loadViews');

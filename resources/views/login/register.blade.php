@@ -26,21 +26,25 @@
                         </div>
                         <div class="col-10 offset-1">
                             <div class="form-group">
-                                <label for="">Nome</label>
+                                <label for="">Qual seu nome?</label>
                                 <input required type="text" id="name" class="form-control" maxlength="46">
                             </div>
                             <div class="form-group">
-                                <label for="">Email</label>
-                                <input required type="text" id="email" class="form-control" maxlength="46">
+                                <label for="">E email?</label>
+                                <input required type="email" id="email" class="form-control" maxlength="46">
                             </div>
                             <div class="form-group">
-                                <label for="">Senha</label>
-                                <input required type="text" id="password" class="form-control">
+                                <label for="">Escolhe uma senha</label>
+                                <input required minlength="6" type="password" id="password" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Repita a senha, por favor</label>
+                                <input required minlength="6" type="password" id="password2" class="form-control">
                             </div>
                             <div class="form-group text-center">
                                 <button type="submit" class="btn btn-lg btn-block" style="background-color: #1abc9c !important; color: #fff; margin-top: 40px;">Cadastrar</button>
                                 <br>
-                                Já tem acesso? <a style="color: #1abc9c" href="/login">clique aqui</a>
+                                <a style="color: #1abc9c" href="/login">Já tenho acesso</a>
                             </div>
                         </div>
                     </form>
@@ -49,7 +53,7 @@
         </div>
 
         <!-- Footer-->
-        <footer class="footer text-center">
+        <footer class="footer text-center" style="padding-bottom: 15px;">
             <div class="container">
                 <div class="row">
                     

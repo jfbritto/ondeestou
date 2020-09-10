@@ -19,26 +19,20 @@
         <div class="container-fluid h-100" style="padding-top: 20px">
             <div class="row h-100 mx-1">
                 <div class="col-12 col-sm-4 offset-sm-4 my-auto rounded pt-3" style="background-color: #2c3e50 !important; color: #fff">
-                    <form id="formAutenticar">
+                    <form id="formForgotPass">
                         <div align="center" class="form-group">
                             <!-- <img id="animate" src="img/animation/debut.JPG" alt=""> -->
                             <img width="100%" style="padding: 10px 27px 20px 35px;" src="img/logo.png" alt="">
                         </div>
                         <div class="col-10 offset-1">
                             <div class="form-group">
-                                <label for="">Email</label>
-                                <input required type="email" id="login" class="form-control" maxlength="46">
-                            </div>
-                            <div class="form-group">
-                                <label for="">Senha</label>
-                                <input required type="password" name="" id="senha" class="form-control">
+                                <label for="">Passa seu email!</label>
+                                <input required type="email" id="email" class="form-control" placeholder="Email cadastrado" maxlength="46">
                             </div>
                             <div class="form-group text-center">
-                                <button class="btn btn-lg btn-block" style="background-color: #1abc9c !important; color: #fff; margin-top: 40px;">Entrar</button>
+                                <button class="btn btn-lg btn-block" style="background-color: #1abc9c !important; color: #fff; margin-top: 40px;">Enviar</button>
                                 <br>
-                                <a style="color: #1abc9c" href="/forgot-pass">Esqueci a senha</a>
-                                <br>
-                                Não tem acesso? <a style="color: #1abc9c" href="/register">clique aqui</a>
+                                <a style="color: #1abc9c" href="/login">Lembrei a senha</a>
                             </div>
                         </div>
                     </form>

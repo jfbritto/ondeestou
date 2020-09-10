@@ -15,6 +15,8 @@ CREATE TABLE users (
     is_root TINYINT(1),
     is_admin TINYINT(100),
     id_admin INT(1),
+    tokenEmail VARCHAR(100),
+    timeToken DATETIME,
     created_at DATETIME,
     updated_at DATETIME,
 PRIMARY KEY (id));
@@ -87,3 +89,6 @@ alter table users add column latitude VARCHAR(100) after phone;
 
 alter table links add column phone VARCHAR(100) after link;
 alter table links add column msg VARCHAR(100) after link;
+
+alter table users add column time_token DATETIME after id_admin;
+alter table users add column token_email VARCHAR(100) after id_admin;

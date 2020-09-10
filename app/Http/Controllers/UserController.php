@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Services\UserService;
 use Str;
 use DB;
+use App\User;
 
 class UserController extends Controller
 {
@@ -35,6 +36,28 @@ class UserController extends Controller
     //editar user
     public function editUser(Request $request)
     {
+
+        $data = [
+            'id' => $request->id,
+            'name' => trim($request->name) ,
+            'city' => trim($request->city),
+            'state' => trim($request->state),
+            'latitude' => trim($request->latitude),
+            'longitude' => trim($request->longitude),
+            'bio' => trim($request->bio),
+        ];
+
+        $response = $this->userService->editUser($data);
+
+        if($response['status'] == 'success')
+            return response()->json(['status'=>'success'], 201);
+
+        return response()->json(['status'=>'error', 'message'=>$response['data']], 201);
+    }
+
+    //editar user
+    public function editUrl(Request $request)
+    {
         $url = Str::kebab(trim($request->url_name));
 
         $user = DB::select( DB::raw("select * from users where url_name = '".$url."' and id != ".$request->id.""));
@@ -44,16 +67,10 @@ class UserController extends Controller
 
         $data = [
             'id' => $request->id,
-            'name' => trim($request->name) ,
             'url_name' => $url ,
-            'city' => trim($request->city),
-            'state' => trim($request->state),
-            'latitude' => trim($request->latitude),
-            'longitude' => trim($request->longitude),
-            'bio' => trim($request->bio),
         ];
 
-        $response = $this->userService->editUser($data);
+        $response = $this->userService->editUrl($data);
 
         if($response['status'] == 'success')
             return response()->json(['status'=>'success'], 201);
@@ -82,7 +99,18 @@ class UserController extends Controller
     public function addUser(Request $request)
     {
 
+        $find_user = User::where('email', $request->email)->first();
+
+        if($find_user)
+            return response()->json(['status'=>'error', 'message'=>'Visshh! Parece que alguém já está usando esse email :('], 201);
+            
         $url = Str::kebab(trim($request->name));
+
+        $user = DB::select( DB::raw("select * from users where url_name = '".$url."'"));
+
+        if(count($user) > 0)
+            return response()->json(['status'=>'error', 'message'=>'A URL "'.$url.'" já pertence à outro usuário! Tente colocar outro nome!'], 201);
+
 
         $data = [
             'name' => trim($request->name),
@@ -100,6 +128,9 @@ class UserController extends Controller
         ];
 
         $response = $this->userService->addUser($data);
+
+        $credentials = array('email' => $request->email, 'password' => $request->password);
+        auth()->attempt($credentials);
 
         // $msg = $request->name." acabou de se cadastrar!";
         // file_get_contents('https://api.telegram.org/bot1366316005:AAHoexLlhQeRJ5OJEAWPF_dj1dmaSUb1iEc/sendMessage?chat_id=-1001312472436&text='.$msg.'');

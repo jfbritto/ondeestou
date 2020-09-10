@@ -36,12 +36,36 @@ class UserService
             $user = DB::table('users')
                         ->where('id', $data['id'])
                         ->update([  'name' => $data['name'],
-                                    'url_name' => $data['url_name'],
                                     'city' => $data['city'],
                                     'state' => $data['state'],
                                     'latitude' => $data['latitude'],
                                     'longitude' => $data['longitude'],
                                     'bio' => $data['bio']]
+                        );
+
+            DB::commit();
+
+            $response = ['status' => 'success', 'data' => $user];
+
+        }catch(Exception $e){
+            DB::rollBack();
+            $response = ['status' => 'error', 'data' => $e->getMessage()];
+        }
+
+        return $response;
+    }
+
+    public function editUrl(array $data)
+    {
+        $response = [];
+
+        try{
+
+            DB::beginTransaction();
+
+            $user = DB::table('users')
+                        ->where('id', $data['id'])
+                        ->update(['url_name' => $data['url_name']]
                         );
 
             DB::commit();

@@ -10,7 +10,19 @@
     RECUPERAÇÃO DE SENHA
     <br>
     <br>
-    <a href="https://ondeestou.app/">CLIQUE AQUI</a>
-
+    E aí {{$user->name}}, esqueceu a senha, né?!
+    <br>
+    Mas relaxa, a gente te ajuda!
+    <br>
+    <br>
+    Clica nesse link!
+    <br>
+    <br>
+    <a href="{{env('APP_URL')}}change-pass?tk={{$user->token_email}}">Trocar senha</a>
+    <br>
+    <br>
+    Att, 
+    <br>
+    Equipe OndeEstou
 </body>
 </html>
