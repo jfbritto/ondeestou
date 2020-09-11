@@ -28,9 +28,7 @@ class SiteController extends Controller
 
                 $from = $request->header('REFERER');
 
-                dd($from);
-
-                return view('site.page', ['user'=>$user[0], 'link'=>$link]);
+                return view('site.page', ['user'=>$user[0], 'link'=>$link, 'from'=>$from]);
 
             }else{
 

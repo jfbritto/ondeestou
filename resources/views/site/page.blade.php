@@ -134,6 +134,7 @@
                 <div class="col-md-12">
 
                     <input type="hidden" id="url_name" value="{{$user->url_name}}">
+                    <input type="hidden" id="from" value="{{$from}}">
         
                     <div id="lista-links"></div>
 

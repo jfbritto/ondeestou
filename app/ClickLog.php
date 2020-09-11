@@ -10,6 +10,7 @@ class ClickLog extends Model
         'type_log',
         'id_link',
         'id_user',
+        'from_site',
         'created_at',
         'updated_at',
     ];

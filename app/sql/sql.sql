@@ -99,3 +99,5 @@ insert into social_networks (name, icon, color) values("Site", "<i class='fas fa
 
 alter table links add column name VARCHAR(100) after id_social_network;
 alter table links add column order_link INT(1) after status;
+
+alter table click_logs add column from_site VARCHAR(100) after id_user

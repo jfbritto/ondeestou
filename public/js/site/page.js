@@ -65,7 +65,8 @@ $(document).ready(function(){
     function addView(){
 
         $.post(window.location.origin + "/add-view", {
-            url_name:$("#url_name").val()
+            url_name:$("#url_name").val(),
+            from:$("#from").val()
         }).then(function(data) {
             if(data.status == 'success') {
 

@@ -24,6 +24,7 @@ class ClickLogController extends Controller
             'type_log' => 'C',
             'id_link' => $request->id_link,
             'id_user' => NULL,
+            'from_site' => NULL,
         ];
 
         $response = $this->clickLogService->addLog($data);
@@ -48,6 +49,7 @@ class ClickLogController extends Controller
                     'type_log' => 'V',
                     'id_link' => NULL,
                     'id_user' => $user[0]->id,
+                    'from_site' => trim($request->from),
                 ];
         
                 $response = $this->clickLogService->addLog($data);
