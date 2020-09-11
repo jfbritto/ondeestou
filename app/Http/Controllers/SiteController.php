@@ -7,7 +7,7 @@ use DB;
 
 class SiteController extends Controller
 {
-    function index($url = "")
+    public function index(Request $request, $url = "")
     {
 
         if($url == ""){
@@ -25,6 +25,10 @@ class SiteController extends Controller
                 }else{
                     $link = "https://www.google.com/maps/search/?api=1&query=".$user[0]->latitude.",".$user[0]->longitude;
                 }
+
+                $from = $request->header('REFERER');
+
+                dd($from);
 
                 return view('site.page', ['user'=>$user[0], 'link'=>$link]);
 
