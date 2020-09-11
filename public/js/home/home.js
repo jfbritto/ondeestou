@@ -32,7 +32,7 @@ $(document).ready(function () {
         if(order == undefined || order == null || order == "")
             order = 0;
 
-        let size = parseInt($(this).data("size"));
+        let size = parseInt($(this).data("size"))+1;
         
         let options = ``;  
         for (var y = 1; y < size; y++) {
