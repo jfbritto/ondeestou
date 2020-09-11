@@ -83,11 +83,18 @@
                 <form action="POST" id="formEditLink">
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="tipe">Tipo</span>
+                            <span class="input-group-text" id="tipe">Icone</span>
                         </div>
                         <select name="" id="id_social_network_edit" class="form-control">
                             <option value="">Selecione</option>
                         </select>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputName">Nome</span>
+                        </div>
+                        <input required id="name_edit" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputName">
                     </div>
 
                     <div class="input-group mb-3">
@@ -103,6 +110,38 @@
             </div>
             <div class="modal-footer">
                 <button form="formEditLink" type="submit" class="btn btn-success">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal editar ordem -->
+<div class="modal fade" id="editOrderModal" tabindex="-1" role="dialog" aria-labelledby="editOrderModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editOrderModalLabel"><i class="fas fa-sort"></i> &nbsp; Ordenar link</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <form action="POST" id="formEditOrder">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="tipe">Ordem de exibição</span>
+                        </div>
+                        <select name="" id="order_link" class="form-control">
+                        </select>
+                    </div>
+
+                    <input type="hidden" value="" id="id_link_order">
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button form="formEditOrder" type="submit" class="btn btn-success">Salvar</button>
             </div>
         </div>
     </div>

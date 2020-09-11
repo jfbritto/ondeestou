@@ -37,6 +37,7 @@ Route::group(['middleware' => ['authenticate']], function(){
     //LINK
     Route::post('/add-link', 'LinkController@addLink');
     Route::post('/edit-link', 'LinkController@editLink');
+    Route::post('/edit-order-link', 'LinkController@editOrderLink');
     Route::get('/search-links', 'LinkController@searchLinksByUser');
     Route::get('/search-links-by-url', 'LinkController@searchLinksByUrl');
     Route::get('/search-link-by-id', 'LinkController@searchLinkById');

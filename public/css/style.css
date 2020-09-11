@@ -30,6 +30,11 @@ footer {
     border-color: #1abc9c !important;
 }
 
+.btn-outline-success:hover {
+    color: #fff !important;
+    background-color: #1abc9c !important;
+}
+
 .btn-outline-success:focus, .btn-outline-success.focus {
     box-shadow: 0 0 0 0.2rem #1abc9c !important;
 }

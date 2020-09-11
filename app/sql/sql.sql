@@ -25,10 +25,12 @@ CREATE TABLE links (
     id INT NOT NULL AUTO_INCREMENT,
     id_user INT(1),
     id_social_network INT(1),
+    name VARCHAR(100),
     link VARCHAR(100),
     phone VARCHAR(100),
     msg VARCHAR(100),
     status CHAR(1),
+    order int(1),
     created_at DATETIME,
     updated_at DATETIME,
 PRIMARY KEY (id));
@@ -92,3 +94,8 @@ alter table links add column msg VARCHAR(100) after link;
 
 alter table users add column time_token DATETIME after id_admin;
 alter table users add column token_email VARCHAR(100) after id_admin;
+
+insert into social_networks (name, icon, color) values("Site", "<i class='fas fa-link icon-style'></i>", "#6c757d");
+
+alter table links add column name VARCHAR(100) after id_social_network;
+alter table links add column order_link INT(1) after status;

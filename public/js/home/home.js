@@ -22,6 +22,29 @@ $(document).ready(function () {
         loadEditModal(id);
     });
 
+    $("#lista-links").on("click", ".orderLink", function () {
+
+        $("#order_link").html("<option value=''>Selecione</option>");
+
+        let id = $(this).data("id");
+        let order = $(this).data("order");
+
+        if(order == undefined || order == null || order == "")
+            order = 0;
+
+        let size = parseInt($(this).data("size"));
+        
+        let options = ``;  
+        for (var y = 1; y < size; y++) {
+            options += `<option value="${y}" ${order==y?'selected':''}>${y}º</option>`;  
+        } 
+
+        $("#id_link_order").val(id);
+        $("#order_link").append(options);
+        $("#editOrderModal").modal("show");
+
+    });
+
     $("#lista-links").on("click", ".openLink", function () {
         let link = $(this).data("link");
         window.open(link, "_blank");
@@ -67,16 +90,22 @@ $(document).ready(function () {
                 if (data.status == "success") {
                     $("#lista-links").html("");
 
+                    let size = parseInt(data.data.length)
+
                     if (data.data.length > 0) {
-                        for (var i in data.data) {
+                        for (var i in data.data) {                        
+
                             $("#lista-links").append(`
                             <div class="list-group" style="margin-bottom: 10px;">
                                 <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" style="background-color: ${data.data[i].color}; color: #fff">
                                     ${data.data[i].icon}
-                                    <span>${data.data[i].name}</span>
+                                    <span>${data.data[i].order_link}º</span>
+                                    <span>${data.data[i].name==null||data.data[i].name==""?`${data.data[i].icon_name}`:`${data.data[i].name}`}</span>
                                     <div class="btn-group" role="group" aria-label="Basic example">
                                         <button type="button" class="btn btn-light editLink" data-id="${data.data[i].id}"><i class="fas fa-pen"></i></button>
+                                        <button type="button" class="btn btn-light orderLink" data-size="${size}" data-order="${data.data[i].order_link}" data-id="${data.data[i].id}"><i class="fas fa-sort"></i></button>
                                     </div>
+                                    
                                 </a>
                             </div>
 
@@ -198,6 +227,7 @@ $(document).ready(function () {
                     .catch();
                         
                     $("#link_edit").val(dataLink.data[0].link);
+                    $("#name_edit").val(dataLink.data[0].name);
                     $("#id_link_edit").val(dataLink.data[0].id);
                 }
             })
@@ -218,6 +248,7 @@ $(document).ready(function () {
                     $.post(window.location.origin + "/edit-link", {
                         id_social_network: $("#id_social_network_edit").val(),
                         link: $("#link_edit").val(),
+                        name: $("#name_edit").val(),
                         id_link: $("#id_link_edit").val(),
                     })
                         .then(function (data) {
@@ -232,6 +263,52 @@ $(document).ready(function () {
                                 Swal.fire({
                                     icon: "success",
                                     text: "Link editado com sucesso!",
+                                    showConfirmButton: false,
+                                    showCancelButton: true,
+                                    cancelButtonText: "OK",
+                                    onClose: () => {},
+                                });
+                            } else if (data.status == "error") {
+                                // showError(data.message);
+                                Swal.fire({
+                                    icon: "error",
+                                    text: data.message,
+                                    showConfirmButton: false,
+                                    showCancelButton: true,
+                                    cancelButtonText: "OK",
+                                    onClose: () => {},
+                                });
+                            }
+                        })
+                        .catch();
+                },
+            },
+        ]);
+    });
+
+    // editar link
+    $("#formEditOrder").submit(function (e) {
+        e.preventDefault();
+
+        Swal.queue([
+            {
+                title: "Carregando...",
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                onOpen: () => {
+                    Swal.showLoading();
+                    $.post(window.location.origin + "/edit-order-link", {
+                        order_link: $("#order_link").val(),
+                        id_link_order: $("#id_link_order").val()
+                    })
+                        .then(function (data) {
+                            if (data.status == "success") {
+                                $("#editOrderModal").modal("hide");
+                                loadLinks();
+
+                                Swal.fire({
+                                    icon: "success",
+                                    text: "Ordem do link editada com sucesso!",
                                     showConfirmButton: false,
                                     showCancelButton: true,
                                     cancelButtonText: "OK",
