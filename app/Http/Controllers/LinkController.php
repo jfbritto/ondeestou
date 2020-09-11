@@ -23,6 +23,7 @@ class LinkController extends Controller
         $data = [
             'id_user' => auth()->user()->id,
             'id_social_network' => $request->id_social_network,
+            'name' => trim($request->name),
             'link' => trim($request->link),
             'status' => 'A',
         ];

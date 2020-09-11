@@ -148,6 +148,7 @@ $(document).ready(function () {
                     $.post(window.location.origin + "/add-link", {
                         id_social_network: $("#id_social_network").val(),
                         link: $("#link").val(),
+                        name: $("#name").val(),
                     })
                         .then(function (data) {
                             if (data.status == "success") {

@@ -45,7 +45,7 @@
                 <form action="POST" id="formAddLink">
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="tipe">Tipo</span>
+                            <span class="input-group-text" id="tipe">Icone</span>
                         </div>
                         <select name="" id="id_social_network" class="form-control">
                             <option value="">Selecione</option>
@@ -54,9 +54,16 @@
 
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputLink">Link</span>
+                            <span class="input-group-text" id="inputNewName">Nome</span>
                         </div>
-                        <input required id="link" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputLink">
+                        <input required id="name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputNewName">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputNewLink">Link</span>
+                        </div>
+                        <input required id="link" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputNewLink">
                     </div>
 
                 </form>
