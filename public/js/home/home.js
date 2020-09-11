@@ -307,14 +307,15 @@ $(document).ready(function () {
                                 $("#editOrderModal").modal("hide");
                                 loadLinks();
 
-                                Swal.fire({
-                                    icon: "success",
-                                    text: "Ordem do link editada com sucesso!",
-                                    showConfirmButton: false,
-                                    showCancelButton: true,
-                                    cancelButtonText: "OK",
-                                    onClose: () => {},
-                                });
+                                // Swal.fire({
+                                //     icon: "success",
+                                //     text: "Ordem do link editada com sucesso!",
+                                //     showConfirmButton: false,
+                                //     showCancelButton: true,
+                                //     cancelButtonText: "OK",
+                                //     onClose: () => {},
+                                // });
+                                Swal.close()
                             } else if (data.status == "error") {
                                 // showError(data.message);
                                 Swal.fire({
