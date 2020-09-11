@@ -99,7 +99,7 @@ $(document).ready(function () {
                             <div class="list-group" style="margin-bottom: 10px;">
                                 <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" style="background-color: ${data.data[i].color}; color: #fff">
                                     ${data.data[i].icon}
-                                    <span>${data.data[i].order_link}º</span>
+                                    <span>${data.data[i].order_link==null||data.data[i].order_link==""?'0':data.data[i].order_link}º</span>
                                     <span>${data.data[i].name==null||data.data[i].name==""?`${data.data[i].icon_name}`:`${data.data[i].name}`}</span>
                                     <div class="btn-group" role="group" aria-label="Basic example">
                                         <button type="button" class="btn btn-light editLink" data-id="${data.data[i].id}"><i class="fas fa-pen"></i></button>
