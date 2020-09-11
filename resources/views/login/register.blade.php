@@ -18,7 +18,7 @@
 
         <div class="container-fluid h-100" style="padding-top: 20px">
             <div class="row h-100 mx-1">
-                <div class="col-12 col-sm-4 offset-sm-4 my-auto rounded pt-3" style="background-color: #2c3e50 !important; color: #fff">
+                <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4 my-auto rounded pt-3" style="background-color: #2c3e50 !important; color: #fff">
                     <form id="formAddUser">
                         <div align="center" class="form-group">
                             <!-- <img id="animate" src="img/animation/debut.JPG" alt=""> -->
@@ -52,18 +52,16 @@
             </div>
         </div>
 
-        <!-- Footer-->
-        <footer class="footer text-center" style="padding-bottom: 15px;">
+        <!-- <footer class="footer text-center" style="padding-bottom: 15px;">
             <div class="container">
                 <div class="row">
                     
-                    <!-- Footer Social Icons-->
                     <div class="col-lg-12">
                         <a class="navbar-brand" href="/"><img id="animate" src="/img/logo.png" alt="" style="width: 100px; opacity: 0.5"></a>
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer> -->
 
         <script src="/js/jquery-3.5.1.min.js" ></script>
         <script src="/js/bootstrap.min.js" ></script>
