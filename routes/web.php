@@ -47,6 +47,9 @@ Route::group(['middleware' => ['authenticate']], function(){
     Route::post('/edit-pass', 'UserController@editPass');
     Route::post('/edit-url', 'UserController@editUrl');
 
+    Route::post('upload-image','UserController@uploadImage')->name('upload.image');
+    Route::post('save-cropped-image','UserController@saveCroppedImage')->name('crop.image');
+
     //CLICK
     Route::get('/search-views', 'ClickLogController@loadViews');
     Route::get('/search-clicks', 'ClickLogController@loadClicks');
