@@ -59,6 +59,23 @@ class LinkController extends Controller
     }
 
     //editar link
+    public function editLinkStatus(Request $request)
+    {
+
+        $data = [
+            'status' => trim($request->status),
+            'id' => trim($request->id_link),
+        ];
+
+        $response = $this->linkService->editLinkStatus($data);
+
+        if($response['status'] == 'success')
+            return response()->json(['status'=>'success'], 201);
+
+        return response()->json(['status'=>'error', 'message'=>$response['data']], 201);
+    }
+
+    //editar link
     public function editOrderLink(Request $request)
     {
         

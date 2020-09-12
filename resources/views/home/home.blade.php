@@ -131,6 +131,8 @@
                 </form>
             </div>
             <div class="modal-footer">
+                <!-- <a type="submit" class="btn btn-danger btnDeleteLink">Excluir</a> -->
+                <a type="submit" class="btn btn-warning btnInactivateLink">Inativar</a>
                 <button form="formEditLink" type="submit" class="btn btn-success">Salvar</button>
             </div>
         </div>

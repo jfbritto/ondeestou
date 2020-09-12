@@ -32,7 +32,7 @@ class LinkService
         try{
 
             $return = DB::select( DB::raw("select 
-                                                lk.id, lk.link, lk.order_link, lk.name, sn.name as icon_name, sn.icon, sn.color 
+                                                lk.id, lk.link, lk.status, lk.order_link, lk.name, sn.name as icon_name, sn.icon, sn.color 
                                             from 
                                                 links lk join social_networks sn on lk.id_social_network=sn.id 
                                             where 
@@ -84,6 +84,31 @@ class LinkService
                         ->update(['id_social_network' => $data['id_social_network'],
                                 'name' => $data['name'],
                                 'link' => $data['link']]
+                        );
+
+            DB::commit();
+
+            $response = ['status' => 'success', 'data' => $link];
+
+        }catch(Exception $e){
+            DB::rollBack();
+            $response = ['status' => 'error', 'data' => $e->getMessage()];
+        }
+
+        return $response;
+    }
+
+    public function editLinkStatus(array $data)
+    {
+        $response = [];
+
+        try{
+
+            DB::beginTransaction();
+
+            $link = DB::table('links')
+                        ->where('id', $data['id'])
+                        ->update(['status' => $data['status']]
                         );
 
             DB::commit();

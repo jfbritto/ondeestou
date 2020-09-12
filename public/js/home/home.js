@@ -7,6 +7,72 @@ $(document).ready(function () {
         $("#addLinkModal").modal("show");
     });
 
+    $("#lista-links").on("click", ".btnActivateLink", function () {
+
+        let id = $(this).data("id");
+
+        Swal.fire({
+            title: 'Deseja realmente ativar o link?',
+            // text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sim',
+            cancelButtonText: 'Não',
+          }).then((result) => {
+            if (result.isConfirmed) {
+
+                Swal.queue([
+                    {
+                        title: "Carregando...",
+                        allowOutsideClick: false,
+                        allowEscapeKey: false,
+                        onOpen: () => {
+                            Swal.showLoading();
+                            $.post(window.location.origin + "/edit-link-status", {
+                                status: 'A',
+                                id_link: id,
+                            })
+                                .then(function (data) {
+                                    if (data.status == "success") {
+
+                                        loadLinks();
+        
+                                        $("#formAddLink").each(function () {
+                                            this.reset();
+                                        });
+        
+                                        Swal.fire({
+                                            icon: "success",
+                                            text: "Link ativado com sucesso!",
+                                            showConfirmButton: false,
+                                            showCancelButton: true,
+                                            cancelButtonText: "OK",
+                                            onClose: () => {},
+                                        });
+                                    } else if (data.status == "error") {
+                                        // showError(data.message);
+                                        Swal.fire({
+                                            icon: "error",
+                                            text: data.message,
+                                            showConfirmButton: false,
+                                            showCancelButton: true,
+                                            cancelButtonText: "OK",
+                                            onClose: () => {},
+                                        });
+                                    }
+                                })
+                                .catch();
+                        },
+                    },
+                ]);
+
+            }
+          })
+
+    });
+
     $("#lista-links").on("click", ".editLink", function () {
 
         Swal.queue([{title: "Carregando...",
@@ -104,8 +170,12 @@ $(document).ready(function () {
                                     <span>${data.data[i].order_link==null||data.data[i].order_link==""?'0':data.data[i].order_link}º</span>
                                     <span>${data.data[i].name==null||data.data[i].name==""?`${data.data[i].icon_name}`:`${data.data[i].name}`}</span>
                                     <div class="btn-group" role="group" aria-label="Basic example">
+                                        ${data.data[i].status=='A'?`
                                         <button type="button" class="btn btn-light editLink" data-id="${data.data[i].id}"><i class="fas fa-pen"></i></button>
                                         <button type="button" class="btn btn-light orderLink" data-size="${size}" data-order="${data.data[i].order_link}" data-id="${data.data[i].id}"><i class="fas fa-sort"></i></button>
+                                        `:`
+                                        <button type="button" class="btn btn-light btnActivateLink" data-id="${data.data[i].id}"><i class="fas fa-power-off"></i></button>
+                                        `}
                                     </div>
                                     
                                 </a>
@@ -239,6 +309,71 @@ $(document).ready(function () {
             })
             .catch();
     }
+
+
+    $(".btnInactivateLink").on("click", function(){
+
+        Swal.fire({
+            title: 'Deseja realmente inativar o link?',
+            // text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sim',
+            cancelButtonText: 'Não',
+          }).then((result) => {
+            if (result.isConfirmed) {
+
+                Swal.queue([
+                    {
+                        title: "Carregando...",
+                        allowOutsideClick: false,
+                        allowEscapeKey: false,
+                        onOpen: () => {
+                            Swal.showLoading();
+                            $.post(window.location.origin + "/edit-link-status", {
+                                status: 'I',
+                                id_link: $("#id_link_edit").val(),
+                            })
+                                .then(function (data) {
+                                    if (data.status == "success") {
+                                        $("#editLinkModal").modal("hide");
+                                        loadLinks();
+        
+                                        $("#formAddLink").each(function () {
+                                            this.reset();
+                                        });
+        
+                                        Swal.fire({
+                                            icon: "success",
+                                            text: "Link inativado com sucesso!",
+                                            showConfirmButton: false,
+                                            showCancelButton: true,
+                                            cancelButtonText: "OK",
+                                            onClose: () => {},
+                                        });
+                                    } else if (data.status == "error") {
+                                        // showError(data.message);
+                                        Swal.fire({
+                                            icon: "error",
+                                            text: data.message,
+                                            showConfirmButton: false,
+                                            showCancelButton: true,
+                                            cancelButtonText: "OK",
+                                            onClose: () => {},
+                                        });
+                                    }
+                                })
+                                .catch();
+                        },
+                    },
+                ]);
+
+            }
+          })
+
+    })
 
     // editar link
     $("#formEditLink").submit(function (e) {

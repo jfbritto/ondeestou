@@ -60,18 +60,17 @@
 
 
         <!-- Footer-->
-        <footer class="footer text-center">
+        <!-- <footer class="footer text-center">
             <div class="container">
                 <div class="row">
                     
-                    <!-- Footer Social Icons-->
                     <div class="col-lg-12">
                         <h4 class="text-uppercase mb-4">Segue lá</h4>
                         <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer> -->
         <!-- Copyright Section-->
         <div class="copyright py-4 text-center text-white">
             <div class="container"><small>Copyright © ondeestou.app {{date('Y')}}</small></div>

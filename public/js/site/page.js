@@ -25,16 +25,18 @@ $(document).ready(function(){
 
                     for (var i in data.data) {
 
-                        $("#lista-links").append(`
-                        <div class="list-group" style="margin-bottom: 10px;" data-id_link="${data.data[i].id}">
-                            <a target="_blank" rel=”noopener noreferrer” href="${data.data[i].link}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" style="background-color: ${data.data[i].color}; color: #fff">
-                                ${data.data[i].icon}
-                                <span>${data.data[i].name==null||data.data[i].name==""?`${data.data[i].icon_name}`:`${data.data[i].name}`}</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-
-                        `);
+                        if(data.data[i].status == 'A'){
+                            $("#lista-links").append(`
+                            <div class="list-group" style="margin-bottom: 10px;" data-id_link="${data.data[i].id}">
+                                <a target="_blank" rel=”noopener noreferrer” href="${data.data[i].link}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" style="background-color: ${data.data[i].color}; color: #fff">
+                                    ${data.data[i].icon}
+                                    <span>${data.data[i].name==null||data.data[i].name==""?`${data.data[i].icon_name}`:`${data.data[i].name}`}</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+    
+                            `);
+                        }
 
                     }
 
