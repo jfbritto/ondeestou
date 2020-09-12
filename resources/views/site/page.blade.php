@@ -15,7 +15,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <meta name=”keywords” content="onde estou, onde, estou, perfil, page" />
-        <meta property="og:url" content="{{env('APP_URL')}}{{$user->url_name}}" />
+        <meta property="og:url" content="{{$image}}" />
         <meta property="type" content="website" />
         <meta property="og:title" content="{{$user->name}}">
         <meta property="og:description" content="{{$user->bio}}">
