@@ -15,11 +15,11 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <meta name=”keywords” content="onde estou, onde, estou, perfil, page" />
-        <meta property="og:url" content="{{env('APP_URL')}}{{$image}}" />
+        <meta property="og:url" content="{{env('APP_URL')}}{{$user->url_name}}" />
         <meta property="type" content="website" />
         <meta property="og:title" content="{{$user->name}}">
         <meta property="og:description" content="{{$user->bio}}">
-        <meta property="og:image" content="/img/user.png">
+        <meta property="og:image" content="{{env('APP_URL')}}{{$image}}">
         <meta property="og:locale" content="pt_BR">
         <meta property="og:image:type" content="image/png">
         <meta property="og:image:width" content="640">
@@ -108,7 +108,7 @@
 
             <div class="row base-cima">
                 <div class="col-sm-5 col-md-4 text-center">
-                    <img src="{{$image}}" style="max-width: 150px" class="img img-fluid rounded-circle img-thumbnail rounded " alt="User"> 
+                    <img src="{$image}" style="max-width: 150px" class="img img-fluid rounded-circle img-thumbnail rounded " alt="User"> 
                 </div>
                 <div class="col-sm-7 col-md-8">
 
@@ -133,7 +133,6 @@
                 <div class="col-md-12">
 
                     <input type="hidden" id="url_name" value="{{$user->url_name}}">
-                    <input type="hidden" id="from" value="{{$from}}">
         
                     <div id="lista-links"></div>
 
