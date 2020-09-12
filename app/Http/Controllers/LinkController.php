@@ -27,6 +27,7 @@ class LinkController extends Controller
             'phone' => trim($request->phone),
             'msg' => trim($request->msg),
             'link' => trim($request->link),
+            'order_link' => trim($request->order_link),
             'status' => 'A',
         ];
 

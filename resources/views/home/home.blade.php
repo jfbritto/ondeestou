@@ -80,6 +80,7 @@
                         <input required id="link" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputNewLink" value="">
                     </div>
 
+                    <input type="hidden" id="global_size" value="">
                 </form>
             </div>
             <div class="modal-footer">

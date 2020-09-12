@@ -90,7 +90,9 @@ $(document).ready(function () {
                 if (data.status == "success") {
                     $("#lista-links").html("");
 
-                    let size = parseInt(data.data.length)
+                    let size = parseInt(data.data.length)+1;
+
+                    $("#global_size").val(size);
 
                     if (data.data.length > 0) {
                         for (var i in data.data) {                        
@@ -151,6 +153,7 @@ $(document).ready(function () {
                         phone: $("#phone").val(),
                         msg: $("#msg").val(),
                         link: $("#link").val(),
+                        order_link: $("#global_size").val(),
                     })
                         .then(function (data) {
                             if (data.status == "success") {
