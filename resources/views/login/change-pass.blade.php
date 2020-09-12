@@ -26,11 +26,11 @@
                         </div>
                         <div class="col-10 offset-1">
                             <div class="form-group">
-                                <label for="">Escolhe sua nova senha</label>
+                                <label for="">{{explode(" ",$user->name)[0]}}, escolha sua nova senha</label>
                                 <input required minlength="6" type="password" id="password" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="">Repita a senha, por favor</label>
+                                <label for="">Repita, por favor</label>
                                 <input required minlength="6" type="password" id="password2" class="form-control">
                             </div>
                             <input required type="hidden" id="token" class="form-control" value="{{$token}}">

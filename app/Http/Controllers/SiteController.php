@@ -28,7 +28,13 @@ class SiteController extends Controller
 
                 $from = $request->header('REFERER');
 
-                return view('site.page', ['user'=>$user[0], 'link'=>$link, 'from'=>$from]);
+                if($user[0]->avatar=='' || $user[0]->avatar==null){
+                    $image = "/img/user.png";
+                }else{
+                    $image = "/storage/user/".$user[0]->avatar;
+                }
+
+                return view('site.page', ['user'=>$user[0], 'link'=>$link, 'from'=>$from, 'image' =>$image]);
 
             }else{
 

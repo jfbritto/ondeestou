@@ -10,7 +10,7 @@
     RECUPERAÇÃO DE SENHA
     <br>
     <br>
-    E aí {{$user->name}}, esqueceu a senha, né?!
+    E aí {{explode(" ",$user->name)[0]}}, esqueceu a senha, né?!
     <br>
     Mas relaxa, a gente te ajuda!
     <br>

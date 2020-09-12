@@ -90,7 +90,7 @@ class AuthenticateController extends Controller
 
         if($find_user){
 
-            return view('login.change-pass', ['token'=>$token]);
+            return view('login.change-pass', ['token'=>$token, 'user' => $find_user]);
         }else{
             return view('site.404', ['error' => true]);
         }

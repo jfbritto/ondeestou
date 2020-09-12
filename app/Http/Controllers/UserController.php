@@ -9,6 +9,7 @@ use DB;
 use App\User;
 use Image;
 use File;
+use Storage;
 
 class UserController extends Controller
 {
@@ -150,7 +151,12 @@ class UserController extends Controller
 			list($width, $height) = getimagesize($request->file);
 			$arr['width'] = $width;
 			$arr['height'] = $height;
-			$arr['file'] = $request->file->getClientOriginalName();
+            $arr['file'] = $request->file->getClientOriginalName();
+
+            $ext = File::extension($arr['file']);
+
+            $arr['file'] = md5($arr['file'].auth()->user()->id.date("H:i:s")).".".$ext;
+
 			if($width > 1000) {
 				Image::make($request->file->getRealPath())->resize(1000,null, function($constraint){
 					$constraint->aspectRatio();
@@ -187,8 +193,18 @@ class UserController extends Controller
             $cin_new_image = imagecreatefromjpeg($source_image);
             $cin_new_image_mirror = ImageCreateTrueColor( $cin_crop_width, $cin_crop_height );
             imagecopyresampled($cin_new_image_mirror,$cin_new_image,0,0,$cin_crop_x_axis,$cin_crop_y_axis,$cin_crop_width, $cin_crop_height, $cin_crop_width, $cin_crop_height);
-            $destination = public_path('uploads/'."cropped_".$image_name);
+            $destination = public_path('user_avatar/'.$image_name);
             imagejpeg($cin_new_image_mirror, $destination, $jpeg_image_quality);
+
+            if(auth()->user()->avatar != "" && auth()->user()->avatar != null){
+                unlink(storage_path("app/public/user/".auth()->user()->avatar));
+            }
+
+            Image::make(public_path("user_avatar/{$image_name}"))->resize(200, 200)->save(storage_path("app/public/user/{$image_name}"));
+
+            unlink(public_path('uploads/'.$image_name));
+            unlink(public_path('user_avatar/'.$image_name));
+            DB::table('users')->where('id', auth()->user()->id)->update(['avatar' => $image_name]);
         
         }else if($ext == 'png'){
 
@@ -201,8 +217,18 @@ class UserController extends Controller
             $empty = imagecolorallocatealpha($cin_new_image_mirror,0x00,0x00,0x00,127);
             imagefill($cin_new_image_mirror, 0, 0, $empty);
             imagecopyresampled($cin_new_image_mirror,$cin_new_image,0,0,$cin_crop_x_axis,$cin_crop_y_axis,$cin_crop_width, $cin_crop_height, $cin_crop_width, $cin_crop_height);
-            $destination = public_path('uploads/'."cropped_".$image_name);
+            $destination = public_path('user_avatar/'.$image_name);
             imagepng($cin_new_image_mirror, $destination);
+
+            if(auth()->user()->avatar != "" && auth()->user()->avatar != null){
+                unlink(storage_path("app/public/user/".auth()->user()->avatar));
+            }
+
+            Image::make(public_path("user_avatar/{$image_name}"))->resize(200, 200)->save(storage_path("app/public/user/{$image_name}"));
+
+            unlink(public_path('uploads/'.$image_name));
+            unlink(public_path('user_avatar/'.$image_name));
+            DB::table('users')->where('id', auth()->user()->id)->update(['avatar' => $image_name]);
         
         }else{
             echo "Formato não suportado";

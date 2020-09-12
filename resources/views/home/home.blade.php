@@ -47,7 +47,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="tipe">Icone</span>
                         </div>
-                        <select name="" id="id_social_network" class="form-control">
+                        <select required name="" id="id_social_network" class="form-control">
                             <option value="">Selecione</option>
                         </select>
                     </div>
@@ -56,7 +56,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputNewName">Nome</span>
                         </div>
-                        <input required id="name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputNewName">
+                        <input id="name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputNewName">
                     </div>
 
                     <div class="input-group mb-3">
@@ -92,7 +92,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="tipe">Icone</span>
                         </div>
-                        <select name="" id="id_social_network_edit" class="form-control">
+                        <select required name="" id="id_social_network_edit" class="form-control">
                             <option value="">Selecione</option>
                         </select>
                     </div>
@@ -101,7 +101,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputName">Nome</span>
                         </div>
-                        <input required id="name_edit" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputName">
+                        <input id="name_edit" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputName">
                     </div>
 
                     <div class="input-group mb-3">

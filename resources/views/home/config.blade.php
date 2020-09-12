@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="{{ url('jcrop') }}/jquery.Jcrop.min.css">
 <style>	
     .img-holder-slider {
-        border:1px solid #efefef;
+        /* border:1px solid #efefef; */
         background-color: #ddd;
         min-height: 144px;
     }
@@ -23,15 +23,15 @@
 
 <div class="card mb-3">
     <div class="card-header">
-        Editar Avatar
+        Foto
     </div>
     <div class="card-body">
 
-        <div class="row" style="border:1px solid #ccc; padding: 10px;">
+        <div class="row" style="padding: 10px;">
             <div class="col-md-5">
                 <div class="form-group">
-                    <button class="btn btn-primary btn-sm" id="upload">Browse</button>
-                    <button class="btn btn-warning btn-sm" id="crop" data-toggle="modal" data-target="#modal-default">Crop</button>
+                    <button class="btn btn-primary btn-sm" id="upload">Buscar</button>
+                    <button class="btn btn-warning btn-sm" id="crop" data-toggle="modal" data-target="#modal-default">Cortar</button>
                 </div>
             </div>
             <div class="col-md-7">
@@ -57,12 +57,12 @@
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				    <span aria-hidden="true">&times;</span>
 				</button>
-				<h4 class="modal-title">Crop Image</h4>
+				<h4 class="modal-title">Cortar imagem</h4>
 			</div>
 			<div class="modal-body" id="toCrop" style="padding: 0!important;"></div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary" id="saveImage">Save Image</button>
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Fechar</button>
+				<button type="button" class="btn btn-primary" id="saveImage">Salvar</button>
 			</div>
 		</div>
 		<!-- /.modal-content -->
@@ -295,7 +295,7 @@
                 $('#saveImage').html('Save Image');
                 $('#modal-default').modal('hide');
                 window.clearInterval(interval);
-                $('.img-holder-slider').html('<img src="{{url("/")}}/uploads/cropped_'+$('.image_name').val()+'?rand='+Math.random()+'" />');
+                $('.img-holder-slider').html('<img src="/storage/user/'+$('.image_name').val()+'?rand='+Math.random()+'" />');
             }
         });
     })
