@@ -108,7 +108,7 @@
 
             <div class="row base-cima">
                 <div class="col-sm-5 col-md-4 text-center">
-                    <img src="{$image}" style="max-width: 150px" class="img img-fluid rounded-circle img-thumbnail rounded " alt="User"> 
+                    <img src="{{$image}}" style="max-width: 150px" class="img img-fluid rounded-circle img-thumbnail rounded " alt="User"> 
                 </div>
                 <div class="col-sm-7 col-md-8">
 
