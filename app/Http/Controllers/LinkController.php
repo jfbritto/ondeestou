@@ -24,6 +24,8 @@ class LinkController extends Controller
             'id_user' => auth()->user()->id,
             'id_social_network' => $request->id_social_network,
             'name' => trim($request->name),
+            'phone' => trim($request->phone),
+            'msg' => trim($request->msg),
             'link' => trim($request->link),
             'status' => 'A',
         ];

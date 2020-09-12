@@ -59,11 +59,25 @@
                         <input id="name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputNewName">
                     </div>
 
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-3 txt-msg" style="display: none;">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputNewPhone">Telefone</span>
+                        </div>
+                        <input id="phone" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputNewPhone">
+                    </div>
+
+                    <div class="input-group mb-3 txt-msg" style="display: none;">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputNewMsg">Mensagem prévia</span>
+                        </div>
+                        <input id="msg" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputNewMsg">
+                    </div>
+
+                    <div class="input-group mb-3 link-msg">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputNewLink">Link</span>
                         </div>
-                        <input required id="link" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputNewLink">
+                        <input required id="link" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputNewLink" value="">
                     </div>
 
                 </form>

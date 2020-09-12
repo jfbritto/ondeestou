@@ -155,20 +155,26 @@ class UserController extends Controller
 
             $ext = File::extension($arr['file']);
 
-            $arr['file'] = md5($arr['file'].auth()->user()->id.date("H:i:s")).".".$ext;
+            if($ext == 'jpg' || $ext == 'jpeg' || $ext == 'png'){
 
-			if($width > 1000) {
-				Image::make($request->file->getRealPath())->resize(1000,null, function($constraint){
-					$constraint->aspectRatio();
-				})->save(public_path('uploads/'.$arr['file']));
-				$arr['width'] = 1000;
-			}
-			else {
-				Image::make($request->file->getRealPath())->save(public_path('uploads/'.$arr['file']));
-			}
+                $arr['file'] = md5($arr['file'].auth()->user()->id.date("H:i:s")).".".$ext;
+
+                if($width > 1000) {
+                    Image::make($request->file->getRealPath())->resize(1000,null, function($constraint){
+                        $constraint->aspectRatio();
+                    })->save(public_path('uploads/'.$arr['file']));
+                    $arr['width'] = 1000;
+                }
+                else {
+                    Image::make($request->file->getRealPath())->save(public_path('uploads/'.$arr['file']));
+                }
+            
+            }else{
+                $arr['error'] = "São suportados apenas arquivos .jpg | .jpeg | .png";
+            }
 		}
 		else {
-			$arr['error'] = "No Image Uploaded";
+			$arr['error'] = "Isso não é uma imagem!";
 
 		}
 		echo json_encode($arr);

@@ -50,14 +50,14 @@
     </div>
 </div>
 	
-<div class="modal fade" id="modal-default">
-	<div class="modal-dialog">
+<div class="modal fade" id="modal-default" data-backdrop="static">
+	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 			<div class="modal-header">
+                <h4 class="modal-title">Cortar imagem</h4>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				    <span aria-hidden="true">&times;</span>
 				</button>
-				<h4 class="modal-title">Cortar imagem</h4>
 			</div>
 			<div class="modal-body" id="toCrop" style="padding: 0!important;"></div>
 			<div class="modal-footer">
@@ -246,11 +246,18 @@
             onComplete: function (file, response) {
                 console.log(response);
                 this.enable();
-                button.html('Browse');
+                button.html('Buscar');
                 var obj = JSON.parse(response);
                 if(obj.error)
                 {
-                    alert(obj.error);
+                    Swal.fire({
+                        icon: "warning",
+                        text: obj.error,
+                        showConfirmButton: false,
+                        showCancelButton: true,
+                        cancelButtonText: "OK",
+                        onClose: () => {},
+                    });
                 }
                 else
                 {
@@ -275,14 +282,14 @@
 
     // When clicked Save in Modal
     $('#saveImage').click(function(){
-        $(this).text('Saving');
+        $(this).text('Salvando');
         $(this).attr('disabled','disabled');
         interval = window.setInterval(function () {
             var text = $(this).text();
             if (text.length < 11) {
                 $(this).text(text + '.');
             } else {
-                $(this).text('Saving');
+                $(this).text('Salvando');
             }
         }, 200);
         $.ajax({
@@ -292,7 +299,7 @@
             success:function(response)
             {
                 $('#saveImage').removeAttr('disabled');
-                $('#saveImage').html('Save Image');
+                $('#saveImage').html('Salvar');
                 $('#modal-default').modal('hide');
                 window.clearInterval(interval);
                 $('.img-holder-slider').html('<img src="/storage/user/'+$('.image_name').val()+'?rand='+Math.random()+'" />');

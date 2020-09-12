@@ -147,8 +147,10 @@ $(document).ready(function () {
                     Swal.showLoading();
                     $.post(window.location.origin + "/add-link", {
                         id_social_network: $("#id_social_network").val(),
-                        link: $("#link").val(),
                         name: $("#name").val(),
+                        phone: $("#phone").val(),
+                        msg: $("#msg").val(),
+                        link: $("#link").val(),
                     })
                         .then(function (data) {
                             if (data.status == "success") {
@@ -344,4 +346,41 @@ $(document).ready(function () {
         inputTest.select();
         document.execCommand("copy");
     }
+
+
+
+    //selecionando wpp
+
+    $("#id_social_network").on("change", function(){
+
+        let social_network = $(this).children("option:selected").text().trim();
+
+        if(social_network == "WhatsApp"){
+            $(".txt-msg").show();
+            $(".link-msg").hide();
+        }
+
+    });
+
+
+    $("#phone, #msg").on("blur", function(){
+        let social = $("#id_social_network").children("option:selected").text().trim();
+
+        console.log(social+' - '+"Whatsapp")
+
+        if(social == "WhatsApp"){
+            let phone = $("#phone").val();
+            let msg = $("#msg").val();
+
+            let link = `https://wa.me/55${phone}?text=${msg}`;
+
+            $("#link").val(link);
+            console.log("veio")
+        }    
+    })
+
+
+    
 });
+
+// https://wa.me/5528999743099?text=asdasd
