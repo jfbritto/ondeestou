@@ -358,6 +358,9 @@ $(document).ready(function () {
         if(social_network == "WhatsApp"){
             $(".txt-msg").show();
             $(".link-msg").hide();
+        }else{
+            $(".txt-msg").hide();
+            $(".link-msg").show();
         }
 
     });
@@ -376,7 +379,7 @@ $(document).ready(function () {
 
             $("#link").val(link);
             console.log("veio")
-        }    
+        }
     })
 
 
