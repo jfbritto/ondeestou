@@ -43,10 +43,11 @@
             Elas fazem parte do seu negócio?
         </p>
         <p style="margin-bottom: 35px !important; font-size: 1.7rem; font-weight: 300 !important; color: #2c3e50 !important; text-align: center !important;" class="masthead-subheading font-weight-light mb-0">
-            Se as respostas foram SIM, o ondeestou.app foi feito para você!
+            Se a maioria das respostas foram SIM, o ondeestou.app foi feito para você!
         </p>
+        <hr>
         <p style="margin-bottom: 35px !important; font-size: 1.7rem; font-weight: 300 !important; color: #2c3e50 !important; text-align: center !important;" class="masthead-subheading font-weight-light mb-0">
-            <img style="max-width: 300px;" class="img img-fluid" src="/img/exe.jpeg" alt="" />
+            <img style="max-width: 200px;" class="img img-fluid" src="/img/exe.jpeg" alt="" />
         </p>
         <p style="margin-bottom: 35px !important; font-size: 1.7rem; font-weight: 300 !important; color: #2c3e50 !important; text-align: center !important;" class="masthead-subheading font-weight-light mb-0">
             Centralize tudo em apenas um lugar!
