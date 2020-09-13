@@ -110,7 +110,7 @@
 
             <div class="row base-cima">
                 <div class="col-sm-5 col-md-4 text-center">
-                    <img data-anijs="if: load, on: window, do: bounceInRight animated, before: scrollReveal" src="{{$image}}" style="max-width: 150px" class="img img-fluid rounded-circle img-thumbnail rounded " alt="User"> 
+                    <img data-anijs="if: load, on: window, do: bounceInDown animated, before: scrollReveal" src="{{$image}}" style="max-width: 150px" class="img img-fluid rounded-circle img-thumbnail rounded " alt="User"> 
                 </div>
                 <div class="col-sm-7 col-md-8">
 
@@ -125,7 +125,7 @@
                                 </div>
                             </a>
                         @endif
-                        <p data-anijs="if: load, on: window, do: bounceInLeft animated, before: scrollReveal" class="bio">{{$user->bio}}</p>
+                        <p data-anijs="if: load, on: window, do: bounceInUp animated, before: scrollReveal" class="bio">{{$user->bio}}</p>
                     </div>
 
 
