@@ -115,7 +115,7 @@
                 <div class="col-sm-5 col-md-4 text-center">
                     <img data-anijs="if: load, on: window, do: zoomInUp animated, after: loadLinks" src="{{$image}}" style="max-width: 150px" class="img img-fluid rounded-circle img-thumbnail rounded " alt="User"> 
                 </div>
-                <div class="col-sm-7 col-md-8">
+                <div class="col-sm-7 col-md-8" style="margin-top: -15px;">
 
                     <div class="profile-info">
                         <div class="display-name" data-anijs="if: load, on: window, do: bounceInLeft animated, after: loadLinks">

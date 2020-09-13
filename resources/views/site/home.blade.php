@@ -8,7 +8,7 @@
 <header class="masthead bg-primary text-white text-center">
     <div class="container d-flex align-items-center flex-column">
         <!-- Masthead Avatar Image-->
-        <img class="masthead-avatar mb-5" src="/template/assets/img/avataaars.svg" alt="" />
+        <img class="masthead-avatar mb-5" src="/img/facebook.png" alt="" />
         <!-- Masthead Heading-->
         <h1 class="masthead-heading text-uppercase mb-0">Onde Estou</h1>
         <!-- Icon Divider-->
@@ -25,7 +25,7 @@
 <section class="page-section portfolio" id="portfolio">
     <div class="container">
 
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Como funciona?</h2>
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Pra que serve?</h2>
 
         <div class="divider-custom">
             <div class="divider-custom-line"></div>
@@ -33,8 +33,17 @@
             <div class="divider-custom-line"></div>
         </div>
 
-        <!-- <div class="row">
+        <div class="row">
             
+            <div class="col-md-6 col-lg-4 mb-5">
+                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                    </div>
+                    <img class="img-fluid" src="/template/assets/img/portfolio/cabin.png" alt="" />
+                </div>
+            </div>
+<!--             
             <div class="col-md-6 col-lg-4 mb-5">
                 <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
                     <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
@@ -87,9 +96,9 @@
                     </div>
                     <img class="img-fluid" src="/template/assets/img/portfolio/submarine.png" alt="" />
                 </div>
-            </div>
+            </div> -->
 
-        </div> -->
+        </div>
 
     </div>
 </section>
@@ -135,7 +144,7 @@
 <section class="page-section" id="contact">
     <div class="container">
 
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Ranking de acessos</h2>
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Quem criou?</h2>
 
         <div class="divider-custom">
             <div class="divider-custom-line"></div>
