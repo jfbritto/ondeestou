@@ -8,7 +8,7 @@
 <header class="masthead bg-primary text-white text-center">
     <div class="container d-flex align-items-center flex-column">
         <!-- Masthead Avatar Image-->
-        <img class="masthead-avatar mb-5" src="/img/people.png" alt="" />
+        <img class="masthead-avatar mb-5" src="/img/fundo.png" alt="" />
         <!-- Masthead Heading-->
         <h1 class="masthead-heading text-uppercase mb-0">Onde Estou</h1>
         <!-- Icon Divider-->
