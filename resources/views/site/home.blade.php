@@ -18,7 +18,7 @@
             <div class="divider-custom-line"></div>
         </div>
         <!-- Masthead Subheading-->
-        <p class="masthead-subheading font-weight-light mb-0">Todos seus lugares em apenas um</p>
+        <!-- <p class="masthead-subheading font-weight-light mb-0">Todos seus lugares em apenas um</p> -->
     </div>
 </header>
 <!-- Portfolio Section-->
@@ -33,7 +33,29 @@
             <div class="divider-custom-line"></div>
         </div>
 
+        <p style="margin-bottom: 35px !important; font-size: 1.7rem; font-weight: 300 !important; color: #2c3e50 !important; text-align: center !important;" class="masthead-subheading font-weight-light mb-0">
+            Quantas redes sociais você tem? Muitas?
+        </p>
+        <p style="margin-bottom: 35px !important; font-size: 1.7rem; font-weight: 300 !important; color: #2c3e50 !important; text-align: center !important;" class="masthead-subheading font-weight-light mb-0">
+            São importantes para você?
+        </p>
+        <p style="margin-bottom: 35px !important; font-size: 1.7rem; font-weight: 300 !important; color: #2c3e50 !important; text-align: center !important;" class="masthead-subheading font-weight-light mb-0">
+            Elas fazem parte do seu negócio?
+        </p>
+        <p style="margin-bottom: 35px !important; font-size: 1.7rem; font-weight: 300 !important; color: #2c3e50 !important; text-align: center !important;" class="masthead-subheading font-weight-light mb-0">
+            Se as respostas foram SIM, o ondeestou.app foi feito para você!
+        </p>
+        <p style="margin-bottom: 35px !important; font-size: 1.7rem; font-weight: 300 !important; color: #2c3e50 !important; text-align: center !important;" class="masthead-subheading font-weight-light mb-0">
+            <img style="max-width: 300px;" class="img img-fluid" src="/img/exe.jpeg" alt="" />
+        </p>
+        <p style="margin-bottom: 35px !important; font-size: 1.7rem; font-weight: 300 !important; color: #2c3e50 !important; text-align: center !important;" class="masthead-subheading font-weight-light mb-0">
+            Centralize tudo em apenas um lugar!
+        </p>
+
+
+
         <div class="row">
+            
             
             <!-- <div class="col-md-6 col-lg-4 mb-5">
                 <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
