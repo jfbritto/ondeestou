@@ -59,115 +59,87 @@
         </p>
 
 
-
-        <div class="row">
-            
-            
-            <!-- <div class="col-md-6 col-lg-4 mb-5">
-                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                    </div>
-                    <img class="img-fluid" src="/template/assets/img/portfolio/cabin.png" alt="" />
-                </div>
-            </div> -->
-<!--             
-            <div class="col-md-6 col-lg-4 mb-5">
-                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                    </div>
-                    <img class="img-fluid" src="/template/assets/img/portfolio/cabin.png" alt="" />
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-5">
-                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                    </div>
-                    <img class="img-fluid" src="/template/assets/img/portfolio/cake.png" alt="" />
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-5">
-                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                    </div>
-                    <img class="img-fluid" src="/template/assets/img/portfolio/circus.png" alt="" />
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                    </div>
-                    <img class="img-fluid" src="/template/assets/img/portfolio/game.png" alt="" />
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
-                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                    </div>
-                    <img class="img-fluid" src="/template/assets/img/portfolio/safe.png" alt="" />
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4">
-                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                    </div>
-                    <img class="img-fluid" src="/template/assets/img/portfolio/submarine.png" alt="" />
-                </div>
-            </div> -->
-
-        </div>
-
     </div>
 </section>
 <!-- About Section-->
 <section class="page-section bg-primary text-white mb-0" id="about">
     <div class="container">
         <!-- About Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-white">Quem está usando?</h2>
+        <h2 class="page-section-heading text-center text-uppercase text-white">Como usar?</h2>
         <!-- Icon Divider-->
         <div class="divider-custom divider-light">
             <div class="divider-custom-line"></div>
             <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
             <div class="divider-custom-line"></div>
         </div>
-        <!-- About Section Content-->
+
         <div class="row">
-
-            <div class="owl-carousel" style="text-align:center">
-
-                @foreach($users as $user)
-                    @php
-                    if($user->avatar != null && $user->avatar != ''){
-                        $avt = '/storage/user/'.$user->avatar;
-                    }else{
-                        $avt = '/img/user.png';
-                    }
-                    @endphp
-                    <a target="_blank" href="/{{$user->url_name}}" class="text-center">
-                        <img style="border-radius: 100%; cursor: pointer;" src="{{$avt}}" alt="" > <br>
-                        <span style="color: white; margin-top: 5px">{{$user->name}}</span>
-                    </a>
-
-                @endforeach
-
+            <div class="col-md-4">
+                <p style="margin-bottom: 15px !important; font-size: 1.3rem; font-weight: 300 !important; color: #fff !important; text-align: center !important;" class="masthead-subheading font-weight-light mb-0">
+                    Ao entrar no site, clique em "REGISTRAR"
+                </p>
+                <p style="margin-bottom: 15px !important; font-size: 1.3rem; font-weight: 300 !important; color: #fff !important; text-align: center !important;" class="masthead-subheading font-weight-light mb-0">
+                    <img style="border-radius: 10px;border: 1px solid #fff; max-width: 200px;" class="img img-fluid" src="/img/1.jpeg" alt="" />
+                </p>
             </div>
-            <!-- <div class="col-md-12 text center"><p class="lead">Compartilhe todas suas redes em apenas um lugar.</p></div> -->
-            <!-- <div class="col-lg-4 mr-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div> -->
+            <div class="col-md-4">
+                <p style="margin-bottom: 15px !important; font-size: 1.3rem; font-weight: 300 !important; color: #fff !important; text-align: center !important;" class="masthead-subheading font-weight-light mb-0">
+                    Preencha os campos com suas informações
+                </p>
+                <p style="margin-bottom: 15px !important; font-size: 1.3rem; font-weight: 300 !important; color: #fff !important; text-align: center !important;" class="masthead-subheading font-weight-light mb-0">
+                    <img style="border-radius: 10px;border: 1px solid #fff; max-width: 200px;" class="img img-fluid" src="/img/2.jpeg" alt="" />
+                </p>
+            </div>
+            <div class="col-md-4">
+                <p style="margin-bottom: 15px !important; font-size: 1.3rem; font-weight: 300 !important; color: #fff !important; text-align: center !important;" class="masthead-subheading font-weight-light mb-0">
+                    Depois de se cadastrar, é hora de adicionar suas redes sociais!
+                </p>
+                <p style="margin-bottom: 15px !important; font-size: 1.3rem; font-weight: 300 !important; color: #fff !important; text-align: center !important;" class="masthead-subheading font-weight-light mb-0">
+                    <img style="border-radius: 10px;border: 1px solid #fff; max-width: 200px;" class="img img-fluid" src="/img/3.jpeg" alt="" />
+                </p>
+            </div>
         </div>
+        <div class="row">
+            <div class="col-md-4">
+                <p style="margin-bottom: 15px !important; font-size: 1.3rem; font-weight: 300 !important; color: #fff !important; text-align: center !important;" class="masthead-subheading font-weight-light mb-0">
+                    Preencha os campos com suas informações
+                </p>
+                <p style="margin-bottom: 15px !important; font-size: 1.3rem; font-weight: 300 !important; color: #fff !important; text-align: center !important;" class="masthead-subheading font-weight-light mb-0">
+                    <img style="border-radius: 10px;border: 1px solid #fff; max-width: 200px;" class="img img-fluid" src="/img/4.jpeg" alt="" />
+                </p>
+            </div>
+            <div class="col-md-4">
+                <p style="margin-bottom: 15px !important; font-size: 1.3rem; font-weight: 300 !important; color: #fff !important; text-align: center !important;" class="masthead-subheading font-weight-light mb-0">
+                    Prontinho! agora é só cadastrar as outras!
+                </p>
+                <p style="margin-bottom: 15px !important; font-size: 1.3rem; font-weight: 300 !important; color: #fff !important; text-align: center !important;" class="masthead-subheading font-weight-light mb-0">
+                    <img style="border-radius: 10px;border: 1px solid #fff; max-width: 200px;" class="img img-fluid" src="/img/5.jpeg" alt="" />
+                </p>
+            </div>
+            <div class="col-md-4">
+                <p style="margin-bottom: 15px !important; font-size: 1.3rem; font-weight: 300 !important; color: #fff !important; text-align: center !important;" class="masthead-subheading font-weight-light mb-0">
+                    Agora basta copiar seu link e compartinhar onde quiser!
+                </p>
+                <p style="margin-bottom: 15px !important; font-size: 1.3rem; font-weight: 300 !important; color: #fff !important; text-align: center !important;" class="masthead-subheading font-weight-light mb-0">
+                    <img style="border-radius: 10px;border: 1px solid #fff; max-width: 200px;" class="img img-fluid" src="/img/6.jpeg" alt="" />
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p style="margin-bottom: 15px !important; font-size: 1.3rem; font-weight: 300 !important; color: #fff !important; text-align: center !important;" class="masthead-subheading font-weight-light mb-0">
+                    Depois de tudo pronto, sua página ficará tipo assim:
+                </p>
+                <p style="margin-bottom: 15px !important; font-size: 1.3rem; font-weight: 300 !important; color: #fff !important; text-align: center !important;" class="masthead-subheading font-weight-light mb-0">
+                    <img style="border-radius: 10px;border: 1px solid #fff; max-width: 200px;" class="img img-fluid" src="/img/exe.jpeg" alt="" />
+                </p>
+            </div>
+        </div>
+
 
     </div>
 </section>
+
 <!-- Contact Section-->
 <section class="page-section" id="contact">
     <div class="container">
@@ -178,6 +150,20 @@
             <div class="divider-custom-line"></div>
             <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
             <div class="divider-custom-line"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <p style="margin-bottom: 15px !important; font-size: 1.3rem; font-weight: 300 !important; color: #2c3e50 !important; text-align: center !important;" class="masthead-subheading font-weight-light mb-0">
+                    <img style="border: 1px solid #fff; max-width: 200px;" class="img img-fluid rounded-circle img-thumbnail rounded" src="/img/dev.jpg" alt="" />
+                </p>
+                <p style="margin-bottom: 15px !important; font-size: 1.5rem; font-weight: 300 !important; color: #2c3e50 !important; text-align: center !important;" class="masthead-subheading font-weight-light mb-0">
+                    João Filipi Britto 
+                    <br>
+                    <br>
+                    <a target="_blank" href="/jfbritto" class="btn btn-secondary">SAIBA MAIS</a>
+                </p>
+            </div>
         </div>
 
         <!-- <div class="row">
@@ -218,6 +204,45 @@
                 </form>
             </div>
         </div> -->
+
+    </div>
+</section>
+
+<!-- About Section-->
+<section class="page-section bg-primary text-white mb-0" id="about">
+    <div class="container">
+        <!-- About Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-white">Quem está usando?</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- About Section Content-->
+        <div class="row">
+
+            <div class="owl-carousel" style="text-align:center">
+
+                @foreach($users as $user)
+                    @php
+                    if($user->avatar != null && $user->avatar != ''){
+                        $avt = '/storage/user/'.$user->avatar;
+                    }else{
+                        $avt = '/img/user.png';
+                    }
+                    @endphp
+                    <a target="_blank" href="/{{$user->url_name}}" class="text-center">
+                        <img style="border-radius: 100%; cursor: pointer;" src="{{$avt}}" alt="" > <br>
+                        <span style="color: white; margin-top: 5px">{{$user->name}}</span>
+                    </a>
+
+                @endforeach
+
+            </div>
+            <!-- <div class="col-md-12 text center"><p class="lead">Compartilhe todas suas redes em apenas um lugar.</p></div> -->
+            <!-- <div class="col-lg-4 mr-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div> -->
+        </div>
 
     </div>
 </section>
