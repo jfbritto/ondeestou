@@ -8,7 +8,7 @@
 <header class="masthead bg-primary text-white text-center">
     <div class="container d-flex align-items-center flex-column">
         <!-- Masthead Avatar Image-->
-        <img class="masthead-avatar mb-5" src="/img/facebook.png" alt="" />
+        <img class="masthead-avatar mb-5" src="/img/people.png" alt="" />
         <!-- Masthead Heading-->
         <h1 class="masthead-heading text-uppercase mb-0">Onde Estou</h1>
         <!-- Icon Divider-->
@@ -35,14 +35,14 @@
 
         <div class="row">
             
-            <div class="col-md-6 col-lg-4 mb-5">
+            <!-- <div class="col-md-6 col-lg-4 mb-5">
                 <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
                     <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                         <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                     </div>
                     <img class="img-fluid" src="/template/assets/img/portfolio/cabin.png" alt="" />
                 </div>
-            </div>
+            </div> -->
 <!--             
             <div class="col-md-6 col-lg-4 mb-5">
                 <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
