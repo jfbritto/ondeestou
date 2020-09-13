@@ -106,6 +106,25 @@
         </div>
         <!-- About Section Content-->
         <div class="row">
+
+            <div class="owl-carousel" style="padding-top: 20px; padding-bottom: 20px; text-align:center">
+
+                @foreach($users as $user)
+                    @php
+                    if($user->avatar != null && $user->avatar != ''){
+                        $avt = '/storage/user/'.$user->avatar;
+                    }else{
+                        $avt = '/img/user.png';
+                    }
+                    @endphp
+                    <a target="_blank" href="/{{$user->url_name}}" class="text-center">
+                        <img style="border-radius: 100%; cursor: pointer;" src="{{$avt}}" alt="" > <br>
+                        <span style="color: white; margin-top: 10px">{{$user->name}}</span>
+                    </a>
+
+                @endforeach
+
+            </div>
             <!-- <div class="col-md-12 text center"><p class="lead">Compartilhe todas suas redes em apenas um lugar.</p></div> -->
             <!-- <div class="col-lg-4 mr-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div> -->
         </div>
@@ -176,5 +195,42 @@
 @stop
 
 @section('js')
+
+<script>
+    $(document).ready(function(){
+        
+        let width  = screen.width;
+        let height = screen.height;
+
+        if(width < 415){
+
+            $(".owl-carousel").owlCarousel({
+                loop:true,
+                margin:80,
+                nav:true,
+                dots:true,
+                autoplay:true,
+                autoplayTimeout:2000,
+                autoplayHoverPause:true,
+                items: 2
+            });
+
+        }else{
+
+            $(".owl-carousel").owlCarousel({
+                loop:true,
+                margin:80,
+                nav:true,
+                dots:true,
+                autoplay:true,
+                autoplayTimeout:2000,
+                autoplayHoverPause:true,
+                items: 4
+            });
+
+        }
+
+    })
+</script>
 
 @stop

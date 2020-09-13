@@ -11,8 +11,10 @@ class SiteController extends Controller
     {
 
         if($url == ""){
+
+            $users = DB::select( DB::raw("select name, url_name, avatar from users order by id desc limit 15"));
             
-            return view('site.home', ['error' => false]);
+            return view('site.home', ['error' => false, 'users' => $users]);
 
         }else{
 

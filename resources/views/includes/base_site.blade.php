@@ -31,6 +31,7 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="/template/css/styles.css" rel="stylesheet" />
+        <link href="/template/css/owl.carousel.min.css" rel="stylesheet">
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -90,7 +91,7 @@
         <script src="/template/assets/mail/contact_me.js"></script>
         <!-- Core theme JS-->
         <script src="template/js/scripts.js"></script>
-
+        <script src="/template/js/owl.carousel.min.js"></script>
         @yield('js')
     </body>
 </html>
