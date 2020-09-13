@@ -19,6 +19,8 @@ $(document).ready(function(){
         }).then(function(data) {
             if(data.status == 'success') {
 
+                $(".dom").show();
+
                 $("#lista-links").html("");
 
                 if(data.data.length > 0){

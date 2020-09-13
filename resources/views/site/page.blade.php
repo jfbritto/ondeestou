@@ -106,26 +106,26 @@
     </head>
     <body style="background-color:#f1f1f1 !important; font-family: Raleway,sans-serif;">
 
-        <div class="container mt-3" style="padding: 0px 25px 0px 25px; max-width: 600px">
+        <div class="container mt-3 dom" style="padding: 0px 25px 0px 25px; max-width: 600px; display: none">
 
             <div class="row base-cima">
                 <div class="col-sm-5 col-md-4 text-center">
-                    <img data-anijs="if: load, on: window, do: zoomInUp animated, before: scrollReveal" src="{{$image}}" style="max-width: 150px" class="img img-fluid rounded-circle img-thumbnail rounded " alt="User"> 
+                    <img data-anijs="if: load, on: window, do: zoomInUp animated, after: loadLinks" src="{{$image}}" style="max-width: 150px" class="img img-fluid rounded-circle img-thumbnail rounded " alt="User"> 
                 </div>
                 <div class="col-sm-7 col-md-8">
 
                     <div class="profile-info">
-                        <div class="display-name" data-anijs="if: load, on: window, do: bounceInLeft animated, before: scrollReveal">
+                        <div class="display-name" data-anijs="if: load, on: window, do: bounceInLeft animated, after: loadLinks">
                             <span>{{$user->name}}&nbsp;</span>
                         </div>
                         @if($user->city != "")
-                            <a @if($link != "#")target="_blank"@endif href="{{$link}}" style="text-decoration: none;" data-anijs="if: load, on: window, do: bounceInRight animated, before: scrollReveal">
+                            <a @if($link != "#")target="_blank"@endif href="{{$link}}" style="text-decoration: none;" data-anijs="if: load, on: window, do: bounceInRight animated, after: loadLinks">
                                 <div class="location">
                                     <i class="fas fa-map-marker-alt"></i> &nbsp;&nbsp;{{$user->city}} @if($user->state != ""), {{$user->state}} @endif
                                 </div>
                             </a>
                         @endif
-                        <p data-anijs="if: load, on: window, do: bounceInUp animated, before: scrollReveal" class="bio">{{$user->bio}}</p>
+                        <p data-anijs="if: load, on: window, do: bounceInUp animated, after: loadLinks" class="bio">{{$user->bio}}</p>
                     </div>
 
 
