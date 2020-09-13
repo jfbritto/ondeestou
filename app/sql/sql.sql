@@ -15,8 +15,9 @@ CREATE TABLE users (
     is_root TINYINT(1),
     is_admin TINYINT(100),
     id_admin INT(1),
-    tokenEmail VARCHAR(100),
-    timeToken DATETIME,
+    time_token VARCHAR(100),
+    token_email DATETIME,
+    status CHAR(1),
     created_at DATETIME,
     updated_at DATETIME,
 PRIMARY KEY (id));
@@ -101,3 +102,5 @@ alter table links add column name VARCHAR(100) after id_social_network;
 alter table links add column order_link INT(1) after status;
 
 alter table click_logs add column from_site VARCHAR(100) after id_user
+
+alter table users add column status CHAR(1) default 'A' after time_token;

@@ -12,7 +12,7 @@ class SiteController extends Controller
 
         if($url == ""){
 
-            $users = DB::select( DB::raw("select name, url_name, avatar from users where avatar != '' order by id desc limit 15"));
+            $users = DB::select( DB::raw("select name, url_name, avatar from users where status = 'A' order by id desc limit 15"));
             
             return view('site.home', ['error' => false, 'users' => $users]);
 
