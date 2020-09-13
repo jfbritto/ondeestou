@@ -19,6 +19,7 @@ $(document).ready(function(){
         }).then(function(data) {
             if(data.status == 'success') {
 
+                $("#load-box").hide();
                 $(".dom").show();
 
                 $("#lista-links").html("");

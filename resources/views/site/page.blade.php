@@ -106,6 +106,9 @@
     </head>
     <body style="background-color:#f1f1f1 !important; font-family: Raleway,sans-serif;">
 
+        <center id="load-box">
+            <i style="font-size: 50px; margin-top: 80px" class="fas fa-spinner fa-pulse"></i>
+        </center>
         <div class="container mt-3 dom" style="padding: 0px 25px 0px 25px; max-width: 600px; display: none">
 
             <div class="row base-cima">
