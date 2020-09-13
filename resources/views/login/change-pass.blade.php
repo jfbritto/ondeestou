@@ -38,6 +38,8 @@
                                 <button type="submit" class="btn btn-lg btn-block" style="background-color: #1abc9c !important; color: #fff; margin-top: 40px;">Salvar</button>
                                 <br>
                                 <a style="color: #1abc9c" href="/login">Eita, acabei de lembrar!</a>
+                                <br>
+                                <a style="color: #1abc9c" href="/">Voltar pro site</a>
                             </div>
                         </div>
                     </form>

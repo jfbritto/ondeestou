@@ -51,6 +51,11 @@
         </p>
         <p style="margin-bottom: 35px !important; font-size: 1.7rem; font-weight: 300 !important; color: #2c3e50 !important; text-align: center !important;" class="masthead-subheading font-weight-light mb-0">
             Centralize tudo em apenas um lugar!
+            <br>
+            Corre lá!
+            <br>
+            <br>
+            <a href="/register" class="btn btn-secondary">CADASTRAR</a>
         </p>
 
 

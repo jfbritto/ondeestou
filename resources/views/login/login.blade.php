@@ -39,6 +39,8 @@
                                 <a style="color: #1abc9c" href="/forgot-pass">Esqueci a senha</a>
                                 <br>
                                 Não tem acesso? <a style="color: #1abc9c" href="/register">clique aqui</a>
+                                <br>
+                                <a style="color: #1abc9c" href="/">Voltar pro site</a>
                             </div>
                         </div>
                     </form>
