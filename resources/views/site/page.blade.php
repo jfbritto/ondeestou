@@ -136,7 +136,7 @@
 
                     <input type="hidden" id="url_name" value="{{$user->url_name}}">
         
-                    <div id="lista-links" data-anijs="if: load, on: window, do: bounceInRight animated, before: scrollReveal"></div>
+                    <div id="lista-links" data-anijs="if: load, on: window, do: fadeInUp animated, before: scrollReveal"></div>
 
                 </div>
             </div>
