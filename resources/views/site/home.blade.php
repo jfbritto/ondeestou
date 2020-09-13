@@ -107,7 +107,7 @@
         <!-- About Section Content-->
         <div class="row">
 
-            <div class="owl-carousel" style="padding-top: 20px; padding-bottom: 20px; text-align:center">
+            <div class="owl-carousel" style="text-align:center">
 
                 @foreach($users as $user)
                     @php
@@ -119,7 +119,7 @@
                     @endphp
                     <a target="_blank" href="/{{$user->url_name}}" class="text-center">
                         <img style="border-radius: 100%; cursor: pointer;" src="{{$avt}}" alt="" > <br>
-                        <span style="color: white; margin-top: 10px">{{$user->name}}</span>
+                        <span style="color: white; margin-top: 5px">{{$user->name}}</span>
                     </a>
 
                 @endforeach

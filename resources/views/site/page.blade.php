@@ -34,6 +34,8 @@
         <link rel="stylesheet" href="/css/style.css">
         <link href="/template/css/styles.css" rel="stylesheet" />
 
+        <link rel="stylesheet" href="/anijis/anicollection.css">
+
         <style>
             .bio {
                 margin: 10px 0;
@@ -108,22 +110,22 @@
 
             <div class="row base-cima">
                 <div class="col-sm-5 col-md-4 text-center">
-                    <img src="{{$image}}" style="max-width: 150px" class="img img-fluid rounded-circle img-thumbnail rounded " alt="User"> 
+                    <img data-anijs="if: load, on: window, do: bounceInRight animated, before: scrollReveal" src="{{$image}}" style="max-width: 150px" class="img img-fluid rounded-circle img-thumbnail rounded " alt="User"> 
                 </div>
                 <div class="col-sm-7 col-md-8">
 
                     <div class="profile-info">
-                        <div class="display-name">
+                        <div class="display-name" data-anijs="if: load, on: window, do: bounceInLeft animated, before: scrollReveal">
                             <span>{{$user->name}}&nbsp;</span>
                         </div>
                         @if($user->city != "")
-                            <a @if($link != "#")target="_blank"@endif href="{{$link}}" style="text-decoration: none;">
+                            <a @if($link != "#")target="_blank"@endif href="{{$link}}" style="text-decoration: none;" data-anijs="if: load, on: window, do: bounceInRight animated, before: scrollReveal">
                                 <div class="location">
                                     <i class="fas fa-map-marker-alt"></i> &nbsp;&nbsp;{{$user->city}} @if($user->state != ""), {{$user->state}} @endif
                                 </div>
                             </a>
                         @endif
-                        <p class="bio">{{$user->bio}}</p>
+                        <p data-anijs="if: load, on: window, do: bounceInLeft animated, before: scrollReveal" class="bio">{{$user->bio}}</p>
                     </div>
 
 
@@ -134,7 +136,7 @@
 
                     <input type="hidden" id="url_name" value="{{$user->url_name}}">
         
-                    <div id="lista-links"></div>
+                    <div id="lista-links" data-anijs="if: load, on: window, do: bounceInRight animated, before: scrollReveal"></div>
 
                 </div>
             </div>
@@ -159,6 +161,8 @@
         <script src="/js/includes.js"></script>
         <script src="/js/site/page.js" ></script>
         @yield('js')
+        <script src="/anijis/anijs.js"></script>
+        <script src="/anijis/anijs-helper-scrollreveal.js"></script>
 
         <!-- <script>
             // Initialize and add the map
