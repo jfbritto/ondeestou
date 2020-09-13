@@ -27,7 +27,7 @@
     </div>
     <div class="card-body">
 
-        <div class="row" style="padding: 10px;">
+        <div class="row" style="padding: 10px;" id="box-foto">
             <div class="col-md-5">
                 <div class="form-group">
                     <button class="btn btn-primary btn-sm" id="upload">Buscar</button>
@@ -42,6 +42,12 @@
                 <input type="hidden" name="y" class="y" value="0" />
                 <input type="hidden" name="w" class="w" value="700" />
                 <input type="hidden" name="h" class="h" value="180" />
+            </div>
+        </div>
+
+        <div class="row" style="padding: 10px;" id="box-foto-txt">
+            <div class="col-md-12">
+                <p>Esta função está disponível apenas para a versão desktop</p>
             </div>
         </div>
 

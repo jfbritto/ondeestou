@@ -188,4 +188,19 @@ $(document).ready(function () {
         ]);
     });   
 
+
+    let width  = screen.width;
+    let height = screen.height;
+
+    if(width < 800){
+
+        $("#box-foto").hide()
+        $("#box-foto-txt").show()
+        
+    }else{
+        $("#box-foto").show()
+        $("#box-foto-txt").hide()
+
+    }
+
 });
