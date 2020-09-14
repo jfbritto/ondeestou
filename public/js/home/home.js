@@ -304,7 +304,20 @@ $(document).ready(function () {
                         
                     $("#link_edit").val(dataLink.data[0].link);
                     $("#name_edit").val(dataLink.data[0].name);
+                    $("#phone_edit").val(dataLink.data[0].phone);
+                    $("#msg_edit").val(dataLink.data[0].msg);
                     $("#id_link_edit").val(dataLink.data[0].id);
+
+                    console.log("echo: "+dataLink.data[0].name_social)
+
+                    if(dataLink.data[0].name_social == "WhatsApp"){
+                        $(".txt-msg-edit").show();
+                        $(".link-msg-edit").hide();
+                    }else{
+                        $(".txt-msg-edit").hide();
+                        $(".link-msg-edit").show();
+                    }
+
                 }
             })
             .catch();
@@ -390,6 +403,8 @@ $(document).ready(function () {
                         id_social_network: $("#id_social_network_edit").val(),
                         link: $("#link_edit").val(),
                         name: $("#name_edit").val(),
+                        phone: $("#phone_edit").val(),
+                        msg: $("#msg_edit").val(),
                         id_link: $("#id_link_edit").val(),
                     })
                         .then(function (data) {
@@ -517,6 +532,38 @@ $(document).ready(function () {
 
             $("#link").val(link);
             console.log("veio")
+        }
+    })
+
+    //selecionando wpp edit
+
+    $("#id_social_network_edit").on("change", function(){
+
+        let social_network = $(this).children("option:selected").text().trim();
+
+        if(social_network == "WhatsApp"){
+            $(".txt-msg-edit").show();
+            $(".link-msg-edit").hide();
+        }else{
+            $(".txt-msg-edit").hide();
+            $(".link-msg-edit").show();
+        }
+
+    });
+
+
+    $("#phone_edit, #msg_edit").on("blur", function(){
+        let social = $("#id_social_network_edit").children("option:selected").text().trim();
+
+        console.log(social+' - '+"Whatsapp")
+
+        if(social == "WhatsApp"){
+            let phone = $("#phone_edit").val();
+            let msg = $("#msg_edit").val();
+
+            let link = `https://wa.me/55${phone}?text=${msg}`;
+
+            $("#link_edit").val(link);
         }
     })
 

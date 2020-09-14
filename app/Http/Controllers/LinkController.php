@@ -47,6 +47,8 @@ class LinkController extends Controller
             'id_social_network' => $request->id_social_network,
             'link' => $request->link ,
             'name' => trim($request->name),
+            'phone' => trim($request->phone),
+            'msg' => trim($request->msg),
             'id' => trim($request->id_link),
         ];
 

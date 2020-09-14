@@ -63,7 +63,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputNewPhone">Telefone</span>
                         </div>
-                        <input id="phone" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputNewPhone">
+                        <input id="phone" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputNewPhone" placeholder="Ex: 28999743099">
                     </div>
 
                     <div class="input-group mb-3 txt-msg" style="display: none;">
@@ -119,7 +119,22 @@
                         <input id="name_edit" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputName">
                     </div>
 
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-3 txt-msg-edit" style="display: none;">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputEditPhone">Telefone</span>
+                        </div>
+                        <input id="phone_edit" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputEditPhone" placeholder="Ex: 28999743099">
+                    </div>
+
+                    <div class="input-group mb-3 txt-msg-edit" style="display: none;">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputEditMsg">Mensagem prévia</span>
+                        </div>
+                        <input id="msg_edit" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputEditMsg">
+                    </div>
+
+
+                    <div class="input-group mb-3 link-msg-edit">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputLink">Link</span>
                         </div>

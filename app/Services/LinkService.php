@@ -15,7 +15,7 @@ class LinkService
 
         try{
 
-            $return = DB::select( DB::raw("select * from links where id = '".$id."'"));
+            $return = DB::select( DB::raw("select lk.*, sn.name as name_social from links lk join social_networks sn on lk.id_social_network=sn.id where lk.id = '".$id."'"));
 
             $response = ['status' => 'success', 'data' => $return];
         }catch(Exception $e){
@@ -83,6 +83,8 @@ class LinkService
                         ->where('id', $data['id'])
                         ->update(['id_social_network' => $data['id_social_network'],
                                 'name' => $data['name'],
+                                'phone' => $data['phone'],
+                                'msg' => $data['msg'],
                                 'link' => $data['link']]
                         );
 
