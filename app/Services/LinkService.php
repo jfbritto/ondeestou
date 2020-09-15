@@ -138,6 +138,16 @@ class LinkService
                         ->update(['order_link' => $data['order_link']]
                         );
 
+            $lk = DB::select( DB::raw("select * from links where id = '".$data['id']."'"))[0];
+            $ord = $lk->order_link;
+            $links = DB::select( DB::raw("select * from links where id_user = '".$lk->id_user."' and order_link >= '".$lk->order_link."' and id <> '".$lk->id."' order by order_link"));
+
+            foreach ($links as $item) {
+                $ord++;
+                DB::table('links')->where('id', $item->id)->update(['order_link' => $ord]);
+            }
+                    
+
             DB::commit();
 
             $response = ['status' => 'success', 'data' => $link];
