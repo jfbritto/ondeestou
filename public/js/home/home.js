@@ -308,8 +308,6 @@ $(document).ready(function () {
                     $("#msg_edit").val(dataLink.data[0].msg);
                     $("#id_link_edit").val(dataLink.data[0].id);
 
-                    console.log("echo: "+dataLink.data[0].name_social)
-
                     if(dataLink.data[0].name_social == "WhatsApp"){
                         $(".txt-msg-edit").show();
                         $(".link-msg-edit").hide();
@@ -522,8 +520,6 @@ $(document).ready(function () {
     $("#phone, #msg").on("blur", function(){
         let social = $("#id_social_network").children("option:selected").text().trim();
 
-        console.log(social+' - '+"Whatsapp")
-
         if(social == "WhatsApp"){
             let phone = $("#phone").val();
             let msg = $("#msg").val();
@@ -531,7 +527,6 @@ $(document).ready(function () {
             let link = `https://wa.me/55${phone}?text=${msg}`;
 
             $("#link").val(link);
-            console.log("veio")
         }
     })
 
@@ -554,8 +549,6 @@ $(document).ready(function () {
 
     $("#phone_edit, #msg_edit").on("blur", function(){
         let social = $("#id_social_network_edit").children("option:selected").text().trim();
-
-        console.log(social+' - '+"Whatsapp")
 
         if(social == "WhatsApp"){
             let phone = $("#phone_edit").val();
