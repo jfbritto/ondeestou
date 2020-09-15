@@ -568,6 +568,18 @@ $(document).ready(function () {
     })
 
 
+
+
+
+    $("#phone, #phone_edit").on("keyup", function(){
+
+        let phone = $(this).val();
+
+        if(phone.length == 2)
+            phone = phone.replace("55","");
+
+        $(this).val(phone);
+    });
     
 });
 

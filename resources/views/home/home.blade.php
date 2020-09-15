@@ -63,7 +63,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputNewPhone">Telefone</span>
                         </div>
-                        <input id="phone" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputNewPhone" placeholder="Ex: 28999743099">
+                        <input id="phone" onkeypress="if (!isNaN(String.fromCharCode(window.event.keyCode))) return true; else return false;" maxlength="11" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputNewPhone" placeholder="Ex: 28999743099">
                     </div>
 
                     <div class="input-group mb-3 txt-msg" style="display: none;">
@@ -123,7 +123,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputEditPhone">Telefone</span>
                         </div>
-                        <input id="phone_edit" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputEditPhone" placeholder="Ex: 28999743099">
+                        <input id="phone_edit" onkeypress="if (!isNaN(String.fromCharCode(window.event.keyCode))) return true; else return false;" maxlength="11" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputEditPhone" placeholder="Ex: 28999743099">
                     </div>
 
                     <div class="input-group mb-3 txt-msg-edit" style="display: none;">
