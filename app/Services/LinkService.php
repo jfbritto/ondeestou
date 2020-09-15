@@ -133,10 +133,7 @@ class LinkService
 
             DB::beginTransaction();
 
-            $link = DB::table('links')
-                        ->where('id', $data['id'])
-                        ->update(['order_link' => $data['order_link']]
-                        );
+            $link = DB::table('links')->where('id', $data['id'])->update(['order_link' => $data['order_link']]);
 
             $lk = DB::select( DB::raw("select * from links where id = '".$data['id']."'"))[0];
             $ord = $lk->order_link;
@@ -146,7 +143,7 @@ class LinkService
                 $ord++;
                 DB::table('links')->where('id', $item->id)->update(['order_link' => $ord]);
             }
-                    
+
 
             DB::commit();
 
