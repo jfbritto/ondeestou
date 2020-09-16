@@ -276,6 +276,8 @@
                         onChange: showCoords,
                             setSelect:   [ 0, 0, 0, 0 ],
                         });
+                    
+                    // $('#toCrop img').Jcrop({ boxWidth: 450, boxHeight: 400 });
                 }
                 window.clearInterval(interval);
             }
