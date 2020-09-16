@@ -233,7 +233,7 @@
                     }
                     @endphp
                     <a target="_blank" href="/{{$user->url_name}}" class="text-center">
-                        <img style="border-radius: 100%; cursor: pointer;" src="{{$avt}}" alt="" > <br>
+                        <img style="border-radius: 100%; cursor: pointer; border: 1px solid #fff" src="{{$avt}}" alt="" > <br>
                         <span style="color: white; margin-top: 5px">{{$user->name}}</span>
                     </a>
 
