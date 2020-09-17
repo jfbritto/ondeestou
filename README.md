@@ -1,4 +1,4 @@
-<p align="center"><img src="/img/logo.png" width="400"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/kessejones/ondeestou/master/public/img/logo.png" width="400"></p>
 
 ## Sobre OndeEstou
 
