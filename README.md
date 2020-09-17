@@ -2,6 +2,6 @@
 
 ## Sobre OndeEstou
 
-Desenvolvido para centralizar todos seus caminhos em apenas uma página! Este é o OndeEsou?
+Desenvolvido para centralizar todos seus caminhos em apenas uma página! Este é o OndeEstou?
 
 - [Acesse aqui](https://ondeestou.app).
