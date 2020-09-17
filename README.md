@@ -4,4 +4,4 @@
 
 Desenvolvido para centralizar todos seus caminhos em apenas uma página! Este é o OndeEstou?
 
-- [Acesse aqui](https://ondeestou.app).
+<a target="_blank" href="https://ondeestou.app">Acesse aqui</a>
