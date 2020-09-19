@@ -71,11 +71,8 @@
 				<button type="button" class="btn btn-primary" id="saveImage">Salvar</button>
 			</div>
 		</div>
-		<!-- /.modal-content -->
 	</div>
-	<!-- /.modal-dialog -->
 </div>
-<!-- /.modal -->
 
 <div class="card mb-3">
     <div class="card-header">
