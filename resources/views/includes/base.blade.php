@@ -8,7 +8,7 @@
 
         <link rel="icon" href="/img/icone.png">
 
-        <meta name="theme-color" content="#53b96a">
+        <meta name="theme-color" content="#1abc9c">
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
