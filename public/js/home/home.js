@@ -506,6 +506,8 @@ $(document).ready(function () {
 
         let social_network = $(this).children("option:selected").text().trim();
 
+        $("#name").val(social_network)
+
         if(social_network == "WhatsApp"){
             $(".txt-msg").show();
             $(".link-msg").hide();
@@ -535,6 +537,8 @@ $(document).ready(function () {
     $("#id_social_network_edit").on("change", function(){
 
         let social_network = $(this).children("option:selected").text().trim();
+
+        $("#name_edit").val(social_network)
 
         if(social_network == "WhatsApp"){
             $(".txt-msg-edit").show();
