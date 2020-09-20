@@ -22,6 +22,8 @@
         <meta property="og:image:width" content="640">
         <meta property="og:image:height" content="480">
 
+        <meta name="theme-color" content="#1abc9c">
+
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="/img/icone.png" />
         <!-- Font Awesome icons (free version)-->
