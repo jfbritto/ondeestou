@@ -104,3 +104,5 @@ alter table links add column order_link INT(1) after status;
 alter table click_logs add column from_site VARCHAR(100) after id_user
 
 alter table users add column status CHAR(1) default 'A' after time_token;
+
+insert into social_networks (name, icon, color) values("Estudos", "<i class='fas fa-link icon-style'></i>", "#6c757d");
