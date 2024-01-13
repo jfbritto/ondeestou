@@ -1,0 +1,46 @@
+version: "3.3"
+services:
+    # image project
+    php:
+        build:
+            args:
+                user: usuario
+                uid: 1001
+            context: ./docker/php/
+            dockerfile: Dockerfile
+        restart: unless-stopped
+        working_dir: /var/www/
+        volumes:
+            - ./:/var/www
+        networks:
+            - projeto_network
+
+    # nginx
+    nginx:
+        image: nginx:alpine
+        restart: unless-stopped
+        ports:
+            - 8787:80
+        volumes:
+            - ./:/var/www
+            - ./docker/nginx/:/etc/nginx/conf.d/
+        networks:
+            - projeto_network
+
+    # db mysql
+    mysql:
+        image: mysql:8
+        restart: unless-stopped
+        environment:
+            MYSQL_DATABASE: ondeestou
+            MYSQL_ROOT_PASSWORD: 'root'
+        volumes:
+            - ./.docker/mysql/dbdata:/var/lib/mysql
+        ports:
+            - 3388:3306
+        networks:
+            - projeto_network
+
+networks:
+    projeto_network:
+        driver: bridge
